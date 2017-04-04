@@ -1,0 +1,70 @@
+.widget {
+    margin: 0 1em 1.5em;
+    @include pad(1.5em);
+
+    /* Make sure select elements fit in widgets. */
+    select {
+        max-width: 100%;
+    }
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+    display: none;
+}
+.widget_wpcom_social_media_icons_widget {
+    text-align: center;
+    ul {
+        @include align-items(stretch);
+        @include display(flex);
+        @include flex-direction(row);
+        @include justify-content(flex-start);
+        @include flex-wrap(wrap);
+    }
+    li {
+        @include flex(1);
+        margin: 0 0 0 0 !important;
+        a {
+            width: 100%;
+            padding-top: 100%;
+            display: block;
+            position: relative;
+            &:hover {
+                color: $white;
+            }
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translatex(-50%) translatey(-50%));
+            }
+        }
+    }
+}
+.widget-title {
+    line-height: 1.1;
+    margin-bottom: rem(20);
+    font-size: rem(24);
+}
+.widget-title a {
+    color: $grey-dark;
+}
+.rss-widget-icon {
+    display: none;
+}
+.widget_rss {
+    li {
+        margin-bottom: 1em;
+        line-height: 1.3;
+    }
+    .rss-date {
+        font-family: $font__heading;
+        color: $grey-dark;
+        padding-left: .5em;
+        font-size: rem(14);
+    }
+}
+
+.justified-gallery {
+    margin: 2em auto;
+}

@@ -1,0 +1,17 @@
+.site-footer {
+    clear: both;
+    color: $white;
+    text-align: center;
+    padding: 2em 5% 2em;
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
+    #legal {
+        font-size: rem(12);
+        padding-top: 1em;
+    }
+    .heweb-logo {
+        @include size(80px 80px);
+    }
+}

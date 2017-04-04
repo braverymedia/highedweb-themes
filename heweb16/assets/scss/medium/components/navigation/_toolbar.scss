@@ -1,0 +1,10 @@
+.site-branding {
+    z-index: 100;
+    @include transform(translatey(0));
+    svg {
+        @include size(250px 76px);
+    }
+}
+.menu-toggle {
+    margin-top: 1.5em;
+}

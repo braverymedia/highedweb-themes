@@ -1,0 +1,24 @@
+.sponsor-wrap {
+  &.sponsor-creative-partner {
+    .sponsor {
+      .sponsor-description {
+        font-size: rem(24);
+      }
+    }
+  }
+  &.sponsor-gold {
+    .sponsor {
+      display: inline-block;
+      width:49.5%;
+      a {
+        color: black;
+      }
+    }
+  }
+  &.sponsor-silver, &.sponsor-bronze {
+    a.sponsor {
+      padding: $gutter $gutter*2;
+      width: 24.5%;
+    }
+  }
+}

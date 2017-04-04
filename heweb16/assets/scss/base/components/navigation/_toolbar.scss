@@ -1,0 +1,76 @@
+.site-header {
+    display: block;
+    position: relative;
+    z-index: 1000;
+}
+.main-navigation {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    @include align-items(stretch);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    a {
+      text-decoration: none;
+    }
+}
+h1.site-title, .site-title {
+    margin: 0;
+    line-height: 1;
+}
+.site-branding {
+    @include flex(0 1 75%);
+    z-index: 101;
+    @include transform(translatey(2px));
+    a {
+        display: block;
+    }
+    .iconic * {
+        @include iconic-color($white);
+    }
+    position: relative;
+    svg {
+        // @include filter( drop-shadow( 0px 0px 8px rgba(0,0,0,0.50) ) );
+        @include size(230px 60px);
+    }
+}
+.menu-toggle {
+    padding: 0;
+    position: relative;
+    z-index: 101;
+    height: 32px;
+    margin: 1.09em 1em 0 0;
+    @include flex(0 1 25%);
+    svg {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+.no-flexbox.no-flexboxtweener.no-flexboxlegacy {
+    .main-navigation {
+        @include outer-container();
+    }
+    .site-branding {
+        @include span-columns(4);
+    }
+    .menu-site-menu-container {
+        @include span-columns(8);
+        @include omega();
+        text-align: right;
+    }
+    .widget {
+        margin: 0;
+        @include span-columns(4);
+        @include omega(3n);
+    }
+    .widget.widget_wpcom_social_media_icons_widget {
+        margin-right: 0 !important;
+        li {
+            @include span-columns(4);
+            @include omega(3n);
+        }
+    }
+}

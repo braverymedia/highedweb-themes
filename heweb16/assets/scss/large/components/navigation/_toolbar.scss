@@ -1,0 +1,27 @@
+
+.site-header {
+    display: block;
+    @include pad( 0 default);
+    z-index: 100;
+    position: relative;
+}
+h1.site-branding, .site-branding {
+    z-index: 1000;
+    @include flex(1 30%);
+    margin-bottom: 0 !important;
+    a {
+        display: block;
+    }
+    .iconic * {
+        @include iconic-color($white);
+        fill: $white;
+    }
+    position: relative;
+    svg {
+        @include size(265px 79px);
+        max-width: none;
+    }
+}
+.menu-toggle {
+    display: none;
+}

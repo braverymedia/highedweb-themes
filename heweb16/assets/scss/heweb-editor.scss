@@ -1,0 +1,72 @@
+@import "bourbon", "config", "neat";
+@import "mixins/mixins-master";
+@import "base/components/site/schedule";
+.pricing-option {
+    background: $light-gray;
+    font-size: rem(14);
+    border: 1px solid $blue;
+    margin: rem(60) 0 rem(35);
+    text-align: center;
+    padding: rem(60) 1em;
+    position: relative;
+    h2 {
+        font-size: rem(34);
+    }
+    .price {
+        font-size: rem(32);
+        color: white;
+        display: block;
+        position: absolute;
+        @include transform(translatey(-50%) translatex(-50%));
+        padding: rem(20);
+        font-family: $font__heading;
+        left: 50%;
+        top: 0;
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+            height: 100%;
+            width: 100%;
+            background: $blue;
+            @include transform(rotate(1deg));
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            left: 0;
+        }
+    }
+    .pricing-date {
+        font-size: rem(18);
+    }
+}
+dl.benefits {
+    clear: both;
+    border: 1px solid $blue-medium;
+    dt {
+        padding: .75em;
+        margin-top: 0;
+        border-bottom: 1px solid $blue-medium;
+        background: $blue-medium;
+        color: white;
+    }
+    dd {
+        background: white;
+        padding: rem(15) rem(25) rem(15) rem(40);
+        border-bottom: 1px solid $light-gray;
+        position: relative;
+        &:nth-child(odd) {
+            background: $light-gray;
+        }
+        &:before {
+            content: url(../img/circle-check-sm.svg);
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            vertical-align: baseline;
+            position: absolute;
+            left: .75em;
+            margin-top: 2px;
+        }
+    }
+}

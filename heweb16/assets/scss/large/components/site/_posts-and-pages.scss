@@ -1,0 +1,29 @@
+.home {
+    #main{
+        @include clearfix;
+        clear: both;
+        @include align-items(stretch);
+        @include display(flex);
+        @include justify-content(flex-start);
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+
+    }
+    article.page {
+        @include flex(2);
+    }
+    .about-section {
+        @include flex(1);
+    }
+}
+.page:not(.home) .content-area {
+    max-width: rem(1100);
+    margin: 0 auto;
+}
+.page .entry-content {
+    .video-embed, .alignright {
+        width: 45%;
+        margin: -3em -7% 3em 1.5em;
+        height: auto;
+    }
+}

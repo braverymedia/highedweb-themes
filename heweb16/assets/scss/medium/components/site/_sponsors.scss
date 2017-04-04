@@ -1,0 +1,113 @@
+.sponsor-wrap {
+
+  &.sponsor-platinum {
+    text-align: center;
+    .sponsor {
+      width: 49.8%;
+      display: inline-block;
+      vertical-align: top;
+      img, svg {
+        height: auto;
+        width: 70%;
+      }
+      .sponsor-description {
+        text-align: left;
+      }
+    }
+  }
+  &.sponsor-creative-partner {
+    .sponsor {
+      width: 100%;
+      .iconic {
+        margin: 0;
+        @include span-columns(4);
+      }
+      .sponsor-description {
+        @include span-columns(8);
+        font-size: rem(18);
+      }
+    }
+  }
+  &.sponsor-gold {
+    .sponsor {
+      display: inline-block;
+      vertical-align: middle;
+      width: 49.5%;
+      a {
+        color: $black;
+      }
+      img, svg {
+        height: auto;
+        max-width: 60%;
+      }
+    }
+  }
+  &.sponsor-silver, &.sponsor-bronze {
+    a.sponsor {
+      float: none;
+      width: 33%;
+    }
+  }
+}
+.page-template-layout-sponsors {
+    .sponsor-info {
+        width: 95%;
+        overflow: visible;
+        &.attendees, &.disclaimer {
+            h2 {
+                margin-top: -1em;
+            }
+            ul {
+                @include columns(2);
+                font-size: rem(16);
+                list-style-position: inside;
+                li {
+                    margin-bottom: .5em;
+                }
+            }
+        }
+        &.institutions {
+            &:before {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+    #sponsorship-packages {
+        .sponsor-package {
+            @include align-items(stretch);
+            @include display(flex);
+            @include flex-direction(row);
+            @include justify-content(flex-start);
+            @include flex-wrap(wrap);
+            > header {
+                @include flex(0 1 40%);
+                width: 30%;
+                height: 300px;
+                background-size: 120%;
+            }
+            .description {
+                @include flex(0 1 60%);
+                padding-top: 0;
+                p {
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translatey(-50%));
+                }
+            }
+            .benefits {
+                @include flex(0 1 100%);
+                margin-bottom: 0;
+                strong {
+                    display: block;
+                }
+            }
+            .opportunity {
+                @include flex(1 100%);
+                li {
+                    font-size: rem(16);
+                }
+            }
+        }
+    }
+}

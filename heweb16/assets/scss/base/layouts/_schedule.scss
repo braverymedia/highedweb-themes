@@ -1,0 +1,185 @@
+.schedule-tools {
+  display: none;
+  font-size: rem(12);
+  text-align: center;
+  margin-bottom: rem(36);
+  .button-group .button {
+    margin-bottom: 4px;
+  }
+}
+.show-for-760-up {
+  display: none !important;
+}
+.page-schedule {
+    h3 {
+      font-size: rem(12);
+      font-weight: $weight__bold;
+      margin-bottom: 1em;
+      &.time-slot {
+        font-family: $font__main;
+        font-size: rem(14);
+        text-align: center;
+        background: $blue;
+        color: $white;
+        line-height: 1;
+        margin: 0 0 rem(18);
+        padding: .5em inherit;
+      }
+    }
+    .section {
+      .header-list {
+        text-transform: uppercase;
+        font-weight: $weight__heavy;
+      }
+      ul {
+        margin-bottom: rem(36);
+        li {
+          border-bottom: 1px solid #eaeaea;
+          a {
+            display: block;
+            padding: .5em 0;
+          }
+        }
+      }
+    }
+  }
+  .section-general {
+    h3.time-slot {
+      background-color: $blue-medium;
+    }
+    .event-title {
+      text-align: center;
+      background-color: $light-gray;
+      padding: .5em 0;
+    }
+    .event-details, .event-description {
+      display: none;
+    }
+  }
+  .track-session {
+    &:before {
+      display: block;
+      padding: .25em .75em;
+      font-size: rem(10);
+      color: $white;
+      margin-right: rem(10);
+      float: left;
+      margin-bottom: 1em;
+      width: 38px;
+      text-align: center;
+    }
+
+    &.track-aim-session:before {
+      content: "AIM";
+      background: $blue-bright;
+    }
+    &.track-dpa-session:before {
+      content: "DPA";
+      background: $purple;
+    }
+    &.track-mcs-session:before {
+      content: "MCS";
+      background: adjust-hue($purple, 50deg);
+    }
+    &.track-mpd-session:before {
+      content: "MPD";
+      background: adjust-hue($purple, 100deg);
+    }
+    &.track-tie-session:before {
+      content: "TIE";
+      background: adjust-hue($purple, 135deg);
+    }
+    &.track-uad-session:before {
+      content: "UAD";
+      background: adjust-hue($purple, 200deg);
+    }
+    &.track-cor-session:before {
+      content: "COR";
+      background: $grey;
+    }
+  }
+  .item-session {
+    @include clearfix;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1em 0;
+    > li:before {
+      margin-bottom: 2em;
+    }
+  }
+  .list-session {
+    > li:before {
+      margin-bottom: 1.5em;
+    }
+    .show-more {
+      font-size: rem(14);
+      line-height: 1.3;
+      padding-bottom: 1em;
+      display: block;
+      margin-left: 50px;
+    }
+    .data-more {
+      padding: rem(18) 0 0;
+      font-size: rem(14);
+      ul {
+        margin-bottom: rem(18);
+      }
+      .session-abstract {
+        margin-bottom: rem(18);
+      }
+      .btn {
+        display: block;
+        margin: 1em auto;
+        text-align: center;
+      }
+    }
+  }
+  .btn-add {
+    display: none;
+  }
+.jump-list {
+  width: 100%;
+  display: block;
+  margin-bottom: rem(36);
+  @include clearfix;
+  li {
+    font-size: rem(12);
+    @include span-columns(3, collapse);
+    text-align: center;
+    font-weight: $weight__bold;
+    border-right: 2px solid $white;
+    &:last-child {
+      border-right: 0;
+    }
+    a {
+      display: block;
+      background: $light-gray;
+      color: $black;
+      padding: .5em;
+    }
+  }
+}
+.list-session {
+  .track-session {
+    @include clearfix;
+    font-size: rem(14);
+    margin-bottom: .75em;
+  }
+}
+.schedule-header-date {
+  font-size: rem(24);
+  line-height: 1.2;
+  margin-bottom: rem(16);
+}
+.js .list-session .data-more, .js .list-session .data-more {display:none;}
+
+// Tags display
+.page-session-tag .site-main > .row > .columns > div {
+  padding: rem(36) 0;
+  border-bottom: 1px solid #eaeaea;
+  h2 {
+    font-size: rem(24);
+  }
+  p {
+    font-size: rem(14);
+  }
+}

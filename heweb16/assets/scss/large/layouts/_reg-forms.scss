@@ -1,0 +1,21 @@
+.heweb-form {
+    .row {
+        @include clearfix;
+        clear: both;
+        @include align-items(flex-start);
+        @include display(flex);
+        @include flex-direction(row);
+        z-index: 1;
+        .large-8 {
+            @include flex(3);
+        }
+        .large-4 {
+            @include flex(2);
+            margin: 0 0 1.5em 2em;
+            @include pad(1em);
+            border-width: 8px 1px 1px 1px;
+            border-style: solid;
+            border-color: $blue-medium $light-gray $light-gray;
+        }
+    }
+}

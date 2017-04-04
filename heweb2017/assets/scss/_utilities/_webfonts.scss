@@ -1,0 +1,88 @@
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3068821, 2015-07-31T18:46:27-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: FranklinITCStd-LightItalic by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-light-italic/
+ *
+ * Webfont: FranklinITCStd-Black by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-black/
+ *
+ * Webfont: FranklinITCStd-BlackItalic by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-black-italic/
+ *
+ * Webfont: FranklinITCStd-Medium by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-medium/
+ *
+ * Webfont: FranklinITCStd-MediumItalic by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-medium-italic/
+ *
+ * Webfont: FranklinITCStd-Ultra by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-ultra/
+ *
+ * Webfont: FranklinITCStd-UltraItalic by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-ultra-italic/
+ *
+ * Webfont: FranklinITCStd-Bold by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-bold/
+ *
+ * Webfont: FranklinITCStd-BoldItalic by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-bold-italic/
+ *
+ * Webfont: FranklinITCStd-ThinItalic by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-thin-italic/
+ *
+ * Webfont: FranklinITCStd-Light by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-light/
+ *
+ * Webfont: FranklinITCStd-Thin by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin/std-thin/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3068821
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Copyright 2007 International Typeface Corporation. All rights reserved. ITC Franklin is designed by David Berlow, The Font Bureau, Inc.
+ *
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2ed395");
+
+// thin
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_B_0", 200, $file-formats: eot ttf woff woff2);
+//thin italic
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_9_0", 200, italic, $file-formats: eot ttf woff woff2);
+// light
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_A_0", 400, $file-formats: eot ttf woff woff2);
+// light italic
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_0_0", 400, italic, $file-formats: eot ttf woff woff2);
+// medium
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_3_0", 500, $file-formats: eot ttf woff woff2);
+// medium italic
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_4_0", 500, italic, $file-formats: eot ttf woff woff2);
+//bold
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_7_0", 700, $file-formats: eot ttf woff woff2);
+// bold italic
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_8_0", 700, italic, $file-formats: eot ttf woff woff2);
+//black
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_1_0", 800, $file-formats: eot ttf woff woff2);
+// black italic
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_2_0", 800, italic, $file-formats: eot ttf woff woff2);
+// ultra
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_5_0", 900, $file-formats: eot ttf woff woff2);
+// ultra italic
+@include font-face("FranklinITCPro", "assets/webfonts/2ED395_6_0", 900, italic, $file-formats: eot ttf woff woff2);
+
+
+// Bodoni
+@include font-face("BodoniBT", "assets/webfonts/lbodonireg_-webfont", 400, $file-formats: eot ttf woff woff2 svg);
+@include font-face("BodoniBT", "assets/webfonts/lbodoniital_-webfont", 400, italic, $file-formats: eot ttf woff woff2 svg);

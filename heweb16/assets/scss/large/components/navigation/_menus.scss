@@ -1,0 +1,33 @@
+.main-navigation {
+	width: 95%;
+	max-width: 100%;
+	height: auto;
+}
+.menu-open .menu-site-menu-container, .menu-site-menu-container {
+	background: transparent !important;
+	-webkit-backdrop-filter: blur(0);
+	height: auto;
+	z-index: 1;
+	padding: rem(30) 0 0 0;
+	position: relative;
+	@include flex(70%);
+	text-align: right;
+	li {
+		font-size: rem(16);
+		display: inline-block;
+		&.current-menu-item a, a:hover {
+			text-shadow: 0 0 0;
+			background: $blue-medium;
+			box-shadow: 0px 2px 8px rgba(0,0,0,0.80);
+		}
+	}
+	a {
+		color: $white;
+		display: inline-block;
+		padding: .25em .75em;
+		text-shadow: 0px 2px 8px rgba(0,0,0,0.80);
+	}
+	opacity: 1;
+	visibility: visible;
+	@include transition(opacity .3s ease);
+}

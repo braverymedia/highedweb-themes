@@ -1,0 +1,29 @@
+.widget {
+    margin: 0 0 1.5em;
+    @include pad(1em 1em);
+    /* Make sure select elements fit in widgets. */
+    select {
+        max-width: 100%;
+    }
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+    display: none;
+}
+.widget_wpcom_social_media_icons_widget {
+    padding: 1em 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        margin: 0;
+        a {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 8px;
+        }
+    }
+}
+.widget-title a {
+    color: $grey-dark;
+}

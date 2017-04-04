@@ -1,0 +1,151 @@
+.setlist {
+    list-style: none;
+}
+#email-special-status {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+    background: $blue;
+    padding: .5em;
+    border-radius: 2px;
+}
+#badge {
+    background: $white url(assets/img/hew-colored.svg) no-repeat left bottom;
+    text-align: center;
+    padding: .5em 1em;
+    border-radius: 2px;
+    border: 1px solid $light-gray;
+    max-width:500px;
+    margin: 0 auto 3em;
+    .badge-firstname {
+        font-size: 2.5em;
+    }
+    .badge-twitter {
+        font-size: 1.5em;
+    }
+}
+.label-note {
+    font-style: italic;
+}
+p.label-note {
+    background-color: $light-gray;
+    padding: .5em;
+    border-radius: 2px;
+}
+#fee-summary-section {
+    background: $white;
+    padding: .5em 1em;
+    border: 1px solid $blue-medium;
+    max-width:500px;
+    margin-bottom: 1em;
+    border-radius: 2px;
+
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    legend {
+        font-size: 24px;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}
+dd, dt, dl {
+    margin: 0;
+}
+dl {
+    margin-bottom: 2em;
+}
+dt {
+    p {
+        font-weight: normal;
+    }
+}
+dd {
+    margin-bottom: 1em;
+}
+ul.element-list-v {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    input[type='checkbox'],input[type='radio'], label {
+        display: inline-block;
+    }
+}
+.checkbox-group {
+    margin: 0;
+    padding: 0;
+    ul {
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    input[type='checkbox'], label {
+        display: inline-block;
+    }
+}
+.columns {
+    &.large-4 {
+        background: $white;
+        border: 1px solid $blue-medium;
+        padding: .5em;
+        border-radius: 2px;
+        ul {
+            margin-left: 1.5em;
+        }
+    }
+    @media (min-width: 900px) {
+        &.large-8 {
+            width: 60%;
+            float:left;
+        }
+        &.large-4 {
+            width: 35%;
+            float: right;
+            clear: none;
+        }
+    }
+}
+
+input {
+  &[type="reset"] {
+    background-color: $medium-gray;
+    border: 0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 1;
+    padding: 1em 2em;
+    text-shadow: none;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+  }
+  + {
+    button {
+      padding: 0.75em 2em;
+    }
+    input {
+      &[type="reset"] {
+        padding: 0.75em 2em;
+      }
+    }
+  }
+}
+
+// Abide error classes
+.error {
+    color: $red;
+}
+[data-abide] span.error, [data-abide] small.error {
+    display: none;
+}

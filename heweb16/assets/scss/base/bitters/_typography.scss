@@ -1,0 +1,96 @@
+// Font smoothing
+html {     -webkit-font-smoothing: antialiased; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and ( min-device-pixel-ratio: 1.25), only screen and ( min-resolution: 200dpi), only screen and ( min-resolution: 1.25dppx) {
+  html {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 .25em;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998rem;
+}
+
+h2 {font-size: 2.827rem;}
+
+h3 {font-size: 1.999rem;}
+
+h4 {font-size: 1.414rem;}
+
+small, .font_small {font-size: 0.707rem;}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3.598rem;
+  }
+
+  h2 {font-size: 2.427rem;}
+
+  h3 {font-size: 1.599rem;}
+
+  h4 {font-size: 1.014rem;}
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+.entry-content {
+  ul, ol {
+    margin-bottom: $small-spacing;
+  }
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+.entry-content {
+  a {
+    text-decoration: underline;
+    &.button, &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}

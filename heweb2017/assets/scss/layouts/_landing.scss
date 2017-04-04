@@ -1,0 +1,15 @@
+.site-content-contain {
+    background-image: url(assets/img/hew-colored.svg);
+    background-size: 200%;
+    background-position: 80% bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @media ( min-width: 768px) {
+        background-size: 100%;
+        background-position: left bottom;
+    }
+    @media ( min-width: 1024px) {
+        background-size: 80%;
+        background-position: -80% bottom;
+    }
+}

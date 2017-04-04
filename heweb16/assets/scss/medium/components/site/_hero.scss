@@ -1,0 +1,62 @@
+.hero {
+    height: rem(240);
+    &:after {
+        @include background-image( url( 'assets/img/hero-mask-short.svg' ) );
+        background-size: 120% 160%;
+        background-position: center 65%;
+    }
+    > img {
+        height: auto;
+        max-width: none;
+        min-width: 100%;
+        width: auto;
+        z-index: 1;
+        bottom: -50%;
+        @include filter( saturate(55%) brightness(120%) contrast(121%) );
+    }
+    .page-title {
+        z-index: 10;
+        position: relative;
+        text-align: center;
+        top: 45%;
+        color: $white;
+        text-shadow: 0px 0px 8px rgba(0,0,0,0.50);
+        @include transform(translatey(-50%));
+        width: 100%;
+        padding: rem(170) 5% .5em;
+        h1 {
+            font-size: rem(64);
+            margin-bottom: .15em;
+        }
+        .subhead {
+            font-family: $font__heading;
+            font-size: rem(18);
+        }
+    }
+}
+.home {
+    .hero {
+        height: 605px;
+        &:after {
+            background-size: fill;
+            background-position: center 70%;
+        }
+        > img {
+            min-height: 100%;
+            min-width: 100%;
+            top: 0;
+        }
+        .page-title {
+            top: 40%;
+            max-width: rem(650);
+            h1 {
+                font-size: rem(64);
+                margin-bottom: .15em;
+            }
+            .subhead {
+                font-family: $font__heading;
+                font-size: rem(18);
+            }
+        }
+    }
+}

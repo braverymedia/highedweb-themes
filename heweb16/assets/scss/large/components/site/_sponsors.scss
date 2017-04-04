@@ -1,0 +1,107 @@
+.page-template-layout-sponsors {
+    .sponsor-info {
+        &.attendees {
+            @include outer-container();
+            position: relative;
+            padding-left: 6em;
+            h2 {
+                position: absolute;
+                @include transform(rotate(-90deg));
+                width: 42%;
+                left: -20%;
+                bottom: 32%;
+            }
+            ul {
+                @include columns(3);
+                font-size: rem(14);
+                list-style-position: inside;
+                li {
+                    margin-bottom: .5em;
+                }
+            }
+        }
+        &.institutions {
+            @include outer-container;
+            max-width: em(980);
+            margin: 4em auto;
+            @include pad(3em 2.5em);
+            p {
+                font-size: rem(24);
+            }
+            a:hover {
+                text-decoration: none;
+            }
+        }
+        &.about-conference {
+            p {
+                font-size: rem(21);
+                font-weight: $weight__book;
+            }
+        }
+    }
+    #sponsorship-packages {
+        padding: 0;
+        width: 100%;
+        .package-intro {
+            h2 {
+                font-size: rem(48);
+                margin-bottom: 0;
+            }
+            .intro-copy {
+                @include outer-container;
+                max-width: 980px;
+                margin: 2em auto;
+                @include pad(default 2.5em);
+                font-size: rem(21);
+                box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.50);
+            }
+        }
+        .sponsor-package {
+
+            > header {
+                padding-top: 0;
+                background-size: cover;
+                height: 250px;
+            }
+            .description {
+                @include pad(default 3em);
+            }
+            .benefits {
+                @include flex(0 1 100%);
+                width: 100%;
+                margin-bottom: 0;
+                ul {
+                    @include columns(2);
+                    @include column-gap(4em);
+                    font-size: rem(14);
+                    list-style-position: inside;
+                    vertical-align: top;
+                    li {
+                        margin-bottom: .5em;
+                        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+                          page-break-inside: avoid; /* Firefox */
+                               break-inside: avoid; /* IE 10+ */
+                               column-break-inside: avoid;
+                    }
+                }
+            }
+            .opportunity {
+                @include flex(1 33%);
+            }
+            &.opportunities .opportunity {
+                @include flex(1 50%);
+                position: relative;
+                z-index: -1;
+                padding: 3em;
+                background: #A4A9AD;
+                &:nth-child(4), &:nth-child(5) {
+                    background: shade(#A4A9AD, 15%);
+                }
+                .price {
+                    top: 2em;
+                    right: 1em;
+                }
+            }
+        }
+    }
+}

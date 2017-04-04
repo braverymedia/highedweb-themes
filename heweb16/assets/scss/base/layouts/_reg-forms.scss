@@ -1,0 +1,164 @@
+.heweb-form {
+    h1 {
+        font-size: rem(43);
+        text-align: center;
+    }
+    h2 {
+      line-height: 1.1;
+    }
+    h3 {
+        margin-top: rem(25);
+    }
+    p.intro {
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid $light-gray;
+        font-size: rem(21);
+        font-weight: $weight__light;
+        margin-bottom: 1.5em;
+        text-align: center;
+    }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    a.btn, a.button {
+      text-decoration: none !important;
+    }
+    .main-navigation a {
+      text-decoration: none;
+    }
+    .row {
+        @include clearfix;
+        clear: both;
+        @include align-items(stretch);
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(flex-start);
+        z-index: 1;
+    }
+    form {
+        legend {
+            font-weight: $weight__bold;
+            text-transform: uppercase;
+            font-size: rem(12);
+            padding: .5em 1em;
+        }
+        h4 {
+            font-size: rem(21);
+            & + p {
+                font-style: italic;
+                font-weight: $weight__light;
+                font-size: rem(14);
+            }
+        }
+        dl {
+            margin-top: 0;
+            margin-bottom: 2em;
+            dt {
+                p {
+                    font-weight: $weight__book;
+                }
+            }
+        }
+        &.form-horizontal {
+            max-width: rem(560);
+            margin-left: auto;
+            margin-right: auto;
+            h3 {
+                font-size: rem(24);
+            }
+        }
+    }
+    label {
+        font-size: rem(14);
+    }
+    .checkbox-group {
+        label {
+            font-weight: normal;
+            font-size: rem(16);
+        }
+    }
+    .error {
+        color: $youtube_color;
+    }
+    [data-abide] span.error, [data-abide] small.error {
+        display: none;
+    }
+    .large-4 {
+        h3 {
+            font-size: rem(18);
+        }
+        p, li {
+            font-size: rem(14);
+        }
+        li {
+            list-style: disc outside;
+            margin-bottom: .5em;
+            margin-left: 1.5em;
+        }
+    }
+
+    // Registration Form
+    #hew-become-member-section {
+        ul {
+            list-style: disc outside;
+            margin-left: 1.5em;
+            margin-bottom: 1.5em;
+        }
+    }
+     // Registration form notes next to labels
+    .label-note {
+        font-weight: $weight__light;
+        font-style: italic;
+        font-size: rem(13);
+    }
+
+    // Registration text areas
+    textarea {
+        min-height: 10em;
+    }
+
+    // Registration form sample-badge
+    .badge {
+        margin: 1em;
+        padding: 1em;
+        border: 1px solid $blue;
+        @include border-top-radius(.5em);
+        @include border-bottom-radius(.5em);
+        box-shadow: 0 0 8px 1px rgba(0,0,0,.4);
+        display: inline-block;
+        width: rem(300);
+        max-width: 100%;
+        .badge-primary {
+            margin: 1em 0;
+            text-align: center;
+            .badge-firstname {
+                font-size: 2em;
+                font-weight: 400;
+                font-family: $font__heading;
+            }
+        }
+        .badge-secondary {
+            line-height: 1.2em;
+            .badge-fullname {
+                font-weight: bold;
+            }
+        }
+    }
+}
+.promote-proposal {
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    strong {
+        display: inline-block;
+        margin-right: 5px;
+        @include transform(translatey(-9px));
+    }
+}
+#fee-summary-section {
+    margin: 2em 0;
+}

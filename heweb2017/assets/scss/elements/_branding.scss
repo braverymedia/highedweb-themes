@@ -1,0 +1,23 @@
+.custom-logo-link {
+  img {
+    max-height: 150px;
+  }
+}
+body.home.title-tagline-hidden {
+  &.has-header-image .custom-logo-link img, &.has-header-video .custom-logo-link img {
+    max-height: 200px;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 30em) {
+  /* Site Branding */
+  .site-branding {
+    padding: 1em 0;
+  }
+  body.home.title-tagline-hidden {
+    &.has-header-image .custom-logo-link img, &.has-header-video .custom-logo-link img {
+      max-height: 350px;
+      max-width: 100%;
+    }
+  }
+}

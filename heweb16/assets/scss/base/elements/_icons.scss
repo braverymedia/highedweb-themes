@@ -1,0 +1,61 @@
+/* Hide all icons that are waiting to be injected */
+img.iconic {
+  display: none;
+}
+
+.iconic-property-fill, .iconic-property-text {
+    stroke: none !important;
+}
+
+.iconic-property-stroke {
+    fill: none !important;
+}
+
+.iconic * {
+    // Main color goes here
+}
+
+.iconic .iconic-property-accent {
+    // Accent color goes here
+}
+
+// Social Icons
+a.genericon {
+    font-size: rem(32);
+    color: $white;
+    display: inline-block;
+    &.genericon-facebook {
+        @include colorize($facebook_color)
+    }
+    &.genericon-twitter {
+        @include colorize($twitter_color);
+    }
+    &.genericon-youtube {
+        @include colorize($youtube_color);
+    }
+    &.genericon-linkedin {
+        @include colorize($linkedin_color);
+    }
+    &.genericon-instagram {
+        @include colorize($instagram_color);
+    }
+    &.genericon-googleplus {
+        @include colorize($google_plus_color);
+    }
+    &.genericon-spotify {
+        @include colorize($spotify_color);
+    }
+    &.genericon-flickr {
+        @include colorize($flickr_color);
+    }
+    &:visited {
+        color: $white;
+    }
+    &:before {
+        position: relative;
+        top: 25px;
+    }
+    &:hover {
+        @include transition(background-color .3s ease);
+    }
+}

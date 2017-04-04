@@ -1,0 +1,36 @@
+.site-info {
+    @include align-items(stretch);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    a {
+        color: $medium-gray;
+        &:hover {
+            text-decoration: none;
+            color: $light-gray;
+        }
+    }
+    #site-meta {
+        @include flex(50%);
+        font-size: rem(12);
+        text-align: left;
+    }
+    .heweb-logo {
+        @include size(100px 90px);
+        display: inline-block;
+        margin-right: rem(20);
+        vertical-align: bottom;
+    }
+    .menu {
+        display: inline-block;
+        width: auto;
+        vertical-align: bottom;
+        margin: 0 0 8px;
+        font-size: rem(14);
+        line-height: 1.6;
+    }
+    #legal {
+        color: $medium-gray;
+        @include align-self(flex-end);
+    }
+}

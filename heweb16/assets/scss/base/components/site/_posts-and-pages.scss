@@ -1,0 +1,76 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.outer-margins {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.about-section, .widget, .home article.page {
+    background: $white;
+    margin: 0 1em 2.5em;
+    position: relative;
+    border-top: 8px solid $blue-medium;
+}
+
+.home article.page, .about-section {
+    @include pad( 1.5em default);
+}
+
+.content-area {
+    @include clearfix;
+    clear: both;
+    @include align-items(stretch);
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    z-index: 1;
+}
+.page:not(.home), .post, .error404 {
+    .content-area {
+        @include pad;
+    }
+    .entry-content {
+        p {
+            font-size: rem(18);
+            line-height: 1.6;
+            &:first-of-type {
+                padding-bottom: 1.5em;
+                border-bottom: 1px solid $light-gray;
+                font-size: rem(21);
+                font-weight: $weight__light;
+                margin-bottom: 1.5em;
+                text-align: center;
+            }
+        }
+    }
+    #main {
+        background: $white;
+        @include pad;
+    }
+
+}

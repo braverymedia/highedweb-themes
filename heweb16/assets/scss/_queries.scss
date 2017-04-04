@@ -1,0 +1,16 @@
+/*--------------------------
+ * Imports base styles by default
+ *--------------------------*/
+
+// Up to Medium
+@media screen and (min-width: 768px) {
+    @import "medium/medium";
+}
+// Up to Large
+@media screen and (min-width: 1100px) {
+    @import "large/large";
+}
+// Large and larger
+@media (min-width: 1400px) {
+    @import "hd/hd";
+}

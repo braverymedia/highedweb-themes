@@ -1,0 +1,22 @@
+.wp-caption {
+    position: relative;
+	img[class*="wp-image-"] {
+		@include center-block;
+        height: auto;
+	}
+
+	.wp-caption-text {
+		background: rgba($grey-dark, .85);
+        position: absolute;
+        bottom: 0;
+        color: $white;
+        padding: .5em 1em .25em;
+        font-style: italic;
+        margin-bottom: 8px;
+        font-size: rem(12);
+        font-weight: $weight__light;
+        a {
+            color: $white;
+        }
+	}
+}

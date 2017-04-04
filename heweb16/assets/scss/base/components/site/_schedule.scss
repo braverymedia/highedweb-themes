@@ -1,0 +1,113 @@
+ul.schedule {
+    list-style:  none;
+    border: 1px solid $blue-light;
+    padding: 0;
+    margin-bottom: rem(35);
+    border-bottom: 0;
+    li {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+        border-bottom: 1px solid $blue-light;
+    }
+    .time {
+        padding: 1em .5em;
+        background: $blue-medium;
+        color: white;
+        display: block;
+        width: auto;
+        font-weight: $weight__bold;
+        font-size: rem(12);
+    }
+    .event {
+        display: block;
+        padding: 1em .5em 1.5em;
+        font-size: rem(12);
+
+    }
+}
+.workshop-schedule {
+    display: block;
+    margin-bottom: rem(25);
+    border: 1px solid $blue-medium;
+    h5 {
+        font-size: rem(14);
+        margin-bottom: 0;
+    }
+    .event-title, .event {
+        @include pad();
+    }
+    .event-title {
+        background: $blue-medium;
+        color: $white;
+        font-size: rem(14);
+        > span {
+            font-size: rem(10);
+            font-family: $font__main;
+            display: block;
+        }
+    }
+    &.academies {
+        border: 0;
+        article {
+            margin-bottom: 5px;
+        }
+        h5 {
+            background: $blue-medium;
+            margin-bottom: 0;
+            a {
+                color: $white;
+            }
+        }
+    }
+    .event {
+        p, p:first-of-type {
+            font-size: rem(14) !important;
+            text-align: left !important;
+
+        }
+        aside {
+            display: block;
+            margin-bottom: rem(25);
+            font-size: rem(12);
+            .presenter-name {
+                display: block;
+            }
+            .presenter-organization {
+                display: block;
+                text-transform: uppercase;
+                font-weight: $weight__heavy;
+                font-size: rem(10);
+                color: gray;
+                margin-bottom: rem(14);
+            }
+        }
+    }
+}
+.js {
+    .workshop-schedule {
+        > article {
+            border-bottom: 1px solid $white;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        .event {
+            display: none;
+            position: relative;
+            &.open {
+                display: block;
+            }
+        }
+    }
+}
+.item-session {
+  .btn.btn-add {
+    display:none;
+    .editing & {
+      display:block;
+      padding: 1em;
+    }
+  }
+}

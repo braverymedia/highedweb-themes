@@ -1,0 +1,58 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: .5em 0;
+}
+
+.home .intro-content {
+    font-size: rem(18);
+    p:first-of-type {
+        font-size: rem(26);
+        font-weight: $weight__light;
+    }
+}
+.page .entry-content {
+    p {
+        font-size: rem(18);
+        line-height: 1.6;
+        &:first-of-type {
+            font-size: rem(21);
+            font-weight: $weight__light;
+        }
+    }
+
+    .video-embed, .alignright, .gallery-columns-1 {
+        width: 55%;
+        float: right;
+        margin: -2em -7% 1.5em 2em;
+        height: auto;
+    }
+    .gallery-columns-1 {
+        @include align-items(stretch);
+        @include display(flex);
+        @include justify-content(flex-start);
+        @include flex-direction(column);
+        .gallery-item {
+            @include flex(1);
+            max-width: 100%;
+        }
+    }
+}

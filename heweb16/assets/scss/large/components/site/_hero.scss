@@ -1,0 +1,45 @@
+.hero {
+    &:after {
+        @include background-image( url( 'assets/img/hero-mask-short.svg' ) );
+        background-size: 120% 195%;
+        background-position: center 60%;
+    }
+    > img {
+        height: auto;
+        max-width: none;
+        min-width: 100%;
+        width: 100%;
+        top: 0;
+        @include transform(translatey(-35%));
+    }
+}
+.home {
+    .hero {
+        height: 630px;
+        &:after {
+            background-size: 150%;
+            background-position: center 70%;
+        }
+        > img {
+            min-height: 100%;
+            min-width: 100%;
+            top: 0;
+            @include transform(translate(0));
+        }
+        .page-title {
+            top: 35%;
+            max-width: none;
+            @include transform(translate(-50%));
+            width: 852px;
+            margin: 0 auto;
+            position: absolute;
+            h1 {
+                font-weight: 900;
+                font-size: rem(84);
+            }
+            .subhead {
+                font-size: rem(32);
+            }
+        }
+    }
+}

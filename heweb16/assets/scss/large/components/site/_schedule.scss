@@ -1,0 +1,116 @@
+ul.schedule {
+    .time {
+        display: inline-block;
+        width: 15%;
+    }
+    .event {
+        display: inline-block;
+        padding: 0 0 0 rem(15);
+    }
+}
+
+.workshop-schedule {
+    h5 {
+        font-size: rem(16);
+    }
+    .event-title {
+        font-size: rem(18);
+        @include pad(1em default);
+        > span {
+            font-size: rem(10);
+            font-family: $font__main;
+            display: block;
+        }
+        cursor: pointer;
+        &:hover {
+            @include transition ( all .3s ease-in-out );
+            background: $blue;
+        }
+    }
+    &.academies {
+        border: 0;
+        @include align-items( stretch );
+        @include display( flex );
+        @include flex-direction( row );
+        @include justify-content( flex-start );
+        article {
+            @include flex( 1 );
+            margin: rem(5);
+        }
+        h5 {
+            text-align: center;
+            a {
+                display: block;
+                padding: 1em 0;
+            }
+        }
+    }
+    .event {
+        @include align-items( stretch );
+        @include display( flex );
+        @include flex-direction( row );
+        @include justify-content( flex-start );
+        p, p:first-of-type {
+            letter-spacing: .04em;
+            border-bottom: 0 !important;
+            @include flex( 4 );
+            @include order( 2 );
+        }
+        aside {
+            @include flex( 1 );
+            margin-bottom: rem(25);
+            font-size: rem(12);
+            margin-right: rem(25);
+            @include order( 1 );
+            position: relative;
+            .presenter-name {
+                display: block;
+            }
+            .presenter-organization {
+                display: block;
+                text-transform: uppercase;
+                font-weight: $weight__heavy;
+                font-size: rem(10);
+                color: gray;
+                margin-bottom: rem(14);
+            }
+            .presenter-bio {
+                font-size: rem(14) !important;
+                position: absolute;
+                background: $light-gray;
+                width: 600px;
+                height: 100%;
+                padding: 2em 2em;
+                left: 100%;
+                top: 0;
+                border-right: 20px solid $blue;
+                overflow: hidden;
+                p {
+                    width: 520px;
+                }
+            }
+        }
+    }
+}
+.js {
+    .workshop-schedule {
+        .event {
+            &.open {
+                display: flex;
+            }
+        }
+        aside {
+            .presenter-bio {
+                width: 0;
+                opacity: 0;
+                visibility: hidden;
+                @include transition ( all .5s ease-in-out );
+                &.open {
+                    width: 600px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+#elsewhere-things {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    box-shadow: 0 0 8px rgba(0,0,0,0.50);
+    @include flex(100%);
+    @include align-items(stretch);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    @include flex-wrap(wrap);
+    > .widget {
+        @include flex(1);
+        margin: 0 1em 2.5em;
+        box-shadow: 0 0 8px rgba(0,0,0,0.50);
+        &.widget_wpcom_social_media_icons_widget {
+            @include flex(100%)
+        }
+    }
+}

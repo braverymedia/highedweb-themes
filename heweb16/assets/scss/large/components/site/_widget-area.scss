@@ -1,0 +1,15 @@
+#elsewhere-things {
+    > .widget {
+        @include flex(1);
+        margin: 0 1em 2.5em;
+        box-shadow: 0 0 8px rgba(0,0,0,0.50);
+        &.widget_wpcom_social_media_icons_widget {
+            @include flex(1)
+        }
+    }
+}
+.widget_wpcom_social_media_icons_widget {
+    li {
+        @include flex(0 1 33%);
+    }
+}

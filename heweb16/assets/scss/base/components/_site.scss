@@ -1,0 +1,24 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+@import "site/posts-and-pages";
+
+/*--------------------------------------------------------------
+10.2 Asides
+--------------------------------------------------------------*/
+@import "site/asides";
+@import "widgets";
+
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+@import "site/comments";
+@import "site/hero";
+@import "site/widget-area";
+@import "site/pricing-tables";
+@import "site/schedule";
+@import "site/mappress";
+@import "site/sponsors";
+@import "site/footer";

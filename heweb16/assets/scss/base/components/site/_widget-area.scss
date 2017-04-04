@@ -1,0 +1,12 @@
+#elsewhere-things {
+    @include clearfix;
+    clear: both;
+    @include background-image( linear-gradient(-77deg, #4BA6C4 20%, rgba(242,109,33, .78) 45%, #2A1B51 80%) );
+    background-repeat: no-repeat;
+    background-size: auto 100%, auto;
+    background-position: left;
+    background-attachment: fixed;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    box-shadow: 0 0 8px rgba(0,0,0,0.50);
+}
