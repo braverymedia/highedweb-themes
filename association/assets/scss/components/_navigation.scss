@@ -1,0 +1,117 @@
+ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 1.2rem 0;
+    text-align: center;
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        display: inline-block;
+        width: 100%;
+        padding: .45rem;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &#related-links {
+        font-family: $font__default-heading-stack;
+        font-weight: 400;
+        letter-spacing: .024em;
+    }
+
+    &.social-links-menu {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        li {
+            flex: 0 1 12%;
+            a {
+                padding: 0 0;
+            }
+        }
+        .icon {
+            height: 35px;
+            width: 35px;
+        }
+        @include medium {
+          li {
+            flex: 0 1 30%;
+            margin-bottom: 20px;
+          }
+          .icon {
+            transition: scale .1s ease-in-out;
+            &:hover {
+              transform: scale(1.4);
+            }
+          }
+        }
+        @include large {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          li {
+            flex: 1;
+            margin-bottom: 0;
+          }
+          .icon {
+            width: 24px;
+            height: 24px;
+          }
+        }
+    }
+}
+button.menu-toggle {
+    display: none;
+}
+// Mobile menu behavior
+@include small-only() {
+    .site-menu-group {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s ease-in-out;
+        transition-delay: 0, .3s;
+        ul.menu {
+            padding: 0 0 1rem;
+            font-size: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s ease-in-out;
+            transition-delay: .8s, 0;
+            a {
+                padding: .55rem;
+            }
+        }
+    }
+    // Menu toggle button
+    button.menu-toggle {
+        @include blank-button;
+        display: block;
+        position: fixed;
+        z-index: 100;
+        top: .95em;
+        left: .65em;
+        .icon {
+            width: 35px;
+            height: 20px;
+        }
+    }
+    body.menu-open {
+      overflow: hidden;
+        .site-menu-group {
+            opacity: 1;
+            visibility: visible;
+            ul.menu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

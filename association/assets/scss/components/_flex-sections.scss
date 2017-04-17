@@ -1,0 +1,213 @@
+.content-section {
+  width: 100%;
+  border-bottom: 10px solid;
+  position: relative;
+  &--title {
+    padding: .678rem .667em;
+    position: relative;
+    z-index: 1;
+    h2 {
+      font-size: 24px;
+    }
+    @include medium() {
+      padding: 1.833em $_fg_gutter;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      h2 {
+        flex: 1;
+      }
+      .content-section--description {
+        flex: 2;
+      }
+    }
+    @include large {
+      padding: 1.833em;
+    }
+  }
+
+  // Map Section
+  .flex-map &--description {
+    p {
+      font-size: ms(0);
+      margin-bottom: .6678rem;
+    }
+    @include medium {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .flex-map &--title {
+    @include medium {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+  }
+
+  // General Content Block
+  .flex-general &--general {
+    &.entry {
+      padding: 1rem .667em;
+      p {
+        margin-bottom: 2em;
+      }
+      @include medium {
+          padding: 1.832em 1.832em 1.832em .916em;
+      }
+      @include large {
+        padding: 1.832em;
+        max-width: 1212px;
+      }
+    }
+  }
+
+  // Callouts
+  .flex-callout &--callout {
+    padding: 1rem .667em;
+    .callout-image-frame {
+      width: 150px;
+      height: auto;
+      margin: 0 auto 1rem;
+      > img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .entry {
+      h3 {
+        font-size: ms(3);
+        margin-bottom: ms(-1);
+      }
+      p {
+        font-size: ms(1);
+        margin-bottom: ms(3);
+      }
+      .button {
+        font-size: ms(2);
+      }
+    }
+    @include medium {
+      padding: ms(5) 1.832em;
+      display: flex;
+      flex-flow: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      .callout-image-frame {
+        flex: 0 1 20%;
+      }
+      .entry {
+        flex: 0 1 80%;
+        padding: 0 1.832em;
+        h3 {
+          font-size: ms(5);
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include large {
+      .callout-image-frame {
+        flex: 0 1 25%;
+      }
+      .entry {
+        flex: 0 1 75%;
+        padding: 0 3.5em;
+        h3 {
+          font-size: ms(6);
+        }
+        p {
+          font-size: ms(2);
+        }
+      }
+    }
+  }
+
+  // Background image
+  &--background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+.flex {
+  &-newsfeed {
+    .post {
+      margin: 1.167em 0 2.389em;
+      &--image-heading {
+        position: relative;
+        line-height: 0;
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      &--title {
+        padding: .556rem .667em;
+        font-size: 22px;
+        text-transform: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        line-height: 1.6;
+        width: 100%;
+        a {
+          text-decoration: none;
+          display: block;
+        }
+        @include medium {
+          font-size: 1.444em;
+        }
+      }
+      .entry {
+        padding: 1rem .667em;
+      }
+    }
+    @include medium {
+      .news-articles {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: .916rem;
+        > * {
+          flex: 1 50%;
+          max-width: 50%;
+          padding: .916em;
+        }
+      }
+    }
+    @include large {
+      .news-articles {
+        > * {
+          flex: 1 33%;
+        }
+      }
+    }
+  }
+  &-twitter {
+    .twitter-button {
+      @include hew-button( #FFFFFF, #47A0EB, #47A0EB );
+      @include hew-button-size(.556em, .556em, 1.111em, 1.1);
+      text-decoration: none;
+      font-family: $font__default-heading-stack;
+      font-weight: $weight__bold;
+      text-transform: uppercase;
+      text-align: center;
+      vertical-align: middle;
+      display: inline-flex;
+      .icon {
+        width: 23px;
+        height: 18px;
+        margin: 0 .3em;
+      }
+      @include small-only {
+        display: none;
+      }
+    }
+  }
+}

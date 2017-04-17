@@ -1,0 +1,105 @@
+// Make sure we have a custom header image
+.has-header-image {
+  // Absolute positioning for the content on phones
+  @include small-only() {
+    #primary-content {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+
+  .custom-header-image {
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    @include medium() {
+      min-height: 30em;
+    }
+    @include large() {
+      min-height: 35em;
+    }
+    > img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    &:after {
+      content: "";
+      background-image: linear-gradient(-180deg, rgba(26,44,62,0.00) 0%, rgba(0,0,0,0.70) 53%);
+      width: 100%;
+      height: 75%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+}
+.page-header {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: auto;
+  .intro-text {
+    font-family: $font__default-heading-stack;
+    line-height: 1.467;
+    position: relative;
+    z-index: 1;
+    h1,h2,h3 {
+      margin: 0;
+    }
+    @include small-only() {
+      font-size: .95em;
+      text-align: center;
+      margin-top: 244px;
+      padding: 1.222em .889em 3.111em;
+      line-height: 1.6;
+    }
+    @include medium() {
+      margin-top: 27%;
+      padding: 1.222em .689em 1.222em;
+      font-size: ms(1);
+      max-width: 95%;
+    }
+    @include large() {
+      margin-top: 15.5%;
+      padding: 1.222em 1em 2.222em;
+      font-size: ms(2);
+      width: 100%;
+      max-width: 1212px;
+    }
+  }
+  .association-front-page & {
+    .intro-text {
+      font-weight: $weight__bold;
+      @include large() {
+        font-size: ms(4);
+      }
+    }
+  }
+  .no-header-image & {
+    @include small-only() {
+      font-size: .95em;
+      margin-top: 44px;
+      padding: 0 .889em;
+      h1 {
+        font-size: ms(3);
+      }
+    }
+    @include medium() {
+      padding: 0 .689em;
+    }
+    @include large() {
+      padding: 0 ms(5);
+    }
+  }
+}

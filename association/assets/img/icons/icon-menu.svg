@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="27px" viewBox="0 0 40 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-iPhone-SE" transform="translate(-14.000000, -15.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="icon-menu" transform="translate(14.000000, 15.000000)">
+                <path d="M38.3333333,15.1875 L1.66666667,15.1875 C0.666666667,15.1875 0,14.5125 0,13.5 C0,12.4875 0.666666667,11.8125 1.66666667,11.8125 L38.3333333,11.8125 C39.3333333,11.8125 40,12.4875 40,13.5 C40,14.5125 39.3333333,15.1875 38.3333333,15.1875 Z" id="Shape"></path>
+                <path d="M38.3333333,3.375 L1.66666667,3.375 C0.666666667,3.375 0,2.7 0,1.6875 C0,0.675 0.666666667,0 1.66666667,0 L38.3333333,0 C39.3333333,0 40,0.675 40,1.6875 C40,2.7 39.3333333,3.375 38.3333333,3.375 Z" id="Shape"></path>
+                <path d="M38.3333333,27 L1.66666667,27 C0.666666667,27 0,26.325 0,25.3125 C0,24.3 0.666666667,23.625 1.66666667,23.625 L38.3333333,23.625 C39.3333333,23.625 40,24.3 40,25.3125 C40,26.325 39.3333333,27 38.3333333,27 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

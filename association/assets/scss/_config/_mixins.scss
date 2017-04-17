@@ -1,0 +1,104 @@
+// Media queries
+$small-wide: 736px;
+$medium-width: 800px;
+$large-width: 1190px;
+$xlarge-width: 1600px;
+
+@mixin small-to-medium {
+    @media ( min-width: #{$small-wide} )
+      and ( max-width: #{$medium-width} ) {
+    @content;
+  }
+}
+@mixin small-only {
+    @media ( max-width: #{$medium-width - 1px} ) {
+    @content;
+  }
+}
+@mixin medium-down {
+  @media (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: #{$xlarge-width}) {
+    @content;
+  }
+}
+
+@mixin aspect( $width: 1, $height: 1 ) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin hew-button( $color, $background, $border ) {
+  color: $color;
+  background-color: $background;
+  border: 0;
+  border-color: $border;
+  display: block;
+  @include medium() {
+    display: inline-block;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: $border;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+}
+
+// Button sizes
+@mixin hew-button-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// Reset style for buttons
+@mixin blank-button() {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}

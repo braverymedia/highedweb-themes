@@ -1,0 +1,48 @@
+// These will be pulled from Typekit and should (hopefully not be used till later)
+$font__default: myriad-pro !default;
+$font__default-condensed: myriad-pro-condensed !default;
+
+// Default stacks
+$font__default-stack: $font__default, 'Myriad Pro', 'Helvetica Neue', Verdana, sans-serif;
+$font__default-heading-stack: 'myriad-pro-condensed', 'Myriad Pro', 'Helvetica Neue', Verdana, sans-serif;
+
+$weight__regular: 400;
+$weight__bold: 700;
+
+// Our modular typescale, configurable in `_global-variables`
+
+body {
+    font-size: ms(0);
+    @include ms-respond(font-size, 0);
+    line-height: 1.667;
+}
+h1,h2,h3,h4,h5,h6 {
+    text-transform: uppercase;
+    font-family: $font__default-heading-stack;
+    font-weight: $weight__bold;
+}
+h1 {
+    font-size: ms(5);
+    @include ms-respond(font-size, 5);
+}
+h2 {
+    font-size: ms(4);
+    @include ms-respond(font-size, 4);
+}
+h3 {
+    font-size: ms(3);
+    @include ms-respond(font-size, 3);
+}
+h4 {
+    font-size: ms(2);
+    @include ms-respond(font-size, 2);
+}
+h5 {
+    font-size: ms(1);
+    @include ms-respond(font-size, 1);
+}
+h6 {
+    font-size: ms(0);
+    @include ms-respond(font-size, 0);
+    font-weight: 600;
+}

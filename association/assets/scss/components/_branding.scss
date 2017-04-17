@@ -1,0 +1,12 @@
+.site-logo {
+  text-align: center;
+  .custom-logo {
+    width: 117px;
+    height: 218px;
+    margin-top: .95em;
+    @include large() {
+      width: 135px;
+      height: 251px;
+    }
+  }
+}

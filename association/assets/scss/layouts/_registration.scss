@@ -1,0 +1,134 @@
+.page-template-layout-registration {
+  .row {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      @include medium {
+        flex-flow: row nowrap;
+      }
+  }
+  form {
+    max-width: 720px;
+    legend {
+        font-weight: $weight__bold;
+        text-transform: uppercase;
+        font-size: ms(-2);
+        padding: ms(-1) ms(0);
+    }
+    h4 {
+        & + p {
+            font-style: italic;
+            font-size: ms(-1);
+        }
+    }
+    dl {
+        margin-top: 0;
+        margin-bottom: ms(1);
+        dt {
+            p {
+                font-weight: $weight__regular;
+            }
+        }
+    }
+    &.form-horizontal {
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  .checkbox-group {
+      label {
+          font-weight: $weight__regular;
+          font-size: ms(0);
+      }
+  }
+
+  // Abide
+  .error {
+      color: $milano-red;
+  }
+  [data-abide] span.error, [data-abide] small.error {
+      display: none;
+  }
+
+  .large-4 {
+      p, li {
+          font-size: ms(0);
+      }
+      li {
+          list-style: disc outside;
+          margin-bottom: .5em;
+          margin-left: 1.5em;
+      }
+  }
+  .setlist {
+    margin-bottom: ms(2);
+    label {
+      font-size: ms(-1);
+    }
+  }
+
+  // Registration Form
+  #hew-become-member-section {
+      ul {
+          list-style: disc outside;
+          // margin-left: 1.5em;
+          margin-bottom: ms(3);
+      }
+  }
+   // Registration form notes next to labels
+  .label-note {
+      font-weight: $weight__regular;
+      font-style: italic;
+      font-size: ms(-1);
+  }
+
+  // Registration text areas
+  textarea {
+      min-height: 10em;
+  }
+
+  // Registration form sample-badge
+  .badge {
+      margin: 1em auto;
+      padding: 1em;
+      border: 1px solid $endeavour;
+      border-radius: .5em;
+      display: inline-block;
+      width: 400px;
+      max-width: 100%;
+      .badge-primary {
+          margin: 1em 0;
+          text-align: center;
+          .badge-firstname {
+              font-size: ms(2);
+              font-weight: $weight__bold;
+              font-family: $font__default-heading-stack;
+          }
+      }
+      .badge-secondary {
+        text-align: center;
+        line-height: 1.2em;
+        .badge-fullname {
+            font-weight: bold;
+        }
+      }
+  }
+}
+.promote-proposal {
+  padding: 1em;
+  text-align: center;
+  border-top: 4px solid $ronchi;
+  border-bottom: 4px solid $ronchi;
+  strong {
+      display: inline-block;
+      margin-right: 5px;
+      transform: translatey(-9px);
+  }
+}
+#fee-summary-section, #hew-become-member-section {
+  margin: ms(1) 0;
+  border-top: 3px solid $tussock;
+  border-bottom: 3px solid $tussock;
+}

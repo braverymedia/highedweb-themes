@@ -1,0 +1,40 @@
+body {
+  @include medium() {
+    #masthead {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 190px;
+    }
+    #primary-content {
+      margin-left: 189.5px;
+    }
+  }
+  @include large() {
+    #masthead {
+      width: 250px;
+    }
+    #primary-content {
+      margin-left: 249.5px;
+    }
+  }
+  &.no-header-image {
+    .hentry, .row {
+      padding: ms(3) .689em;
+      max-width: 1100px;
+      @include medium() {
+        padding: ms(5) 1em;
+      }
+      @include large() {
+        padding: ms(5);
+      }
+      h1, h2, h3, h4 {
+        margin-top: ms(2);
+      }
+      p {
+        margin-bottom: ms(2);
+      }
+    }
+  }
+}

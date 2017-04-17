@@ -1,0 +1,165 @@
+// Colors
+$big-stone: #1a2c3e;
+$endeavour: #2f5b88;
+$jelly-bean: #407597;
+$shakespeare: #5f9db8;
+$romance: #fffffe;
+$brandy-punch: #c47f3f;
+$milano-red: #a13230;
+$ecstasy: #c1623a;
+$tussock: #d29e46;
+$desert: #a0653c;
+$mojo: #bb4635;
+$ronchi: #e3c351;
+$vivid-auburn: #912b2a;
+$white: $romance;
+$black: #000;
+
+body {
+  background-color: $big-stone;
+  font-family: $font__default-stack;
+  &.no-header-image {
+    .site-main {
+      background-color: $white;
+    }
+    .page-header {
+      background-color: $endeavour;
+      color: $white;
+    }
+  }
+}
+
+a {
+    color: $jelly-bean;
+}
+a:visited {
+    color: $mojo;
+}
+
+#masthead {
+    color: $white;
+    a {
+        color: $white;
+    }
+    @include medium() {
+        background-color: $big-stone;
+    }
+    .site-menu-group {
+        background-color: $big-stone;
+    }
+}
+#site-menu a {
+    &:hover {
+        background-color: $endeavour;
+    }
+}
+#related-links a {
+  &:hover {
+    color: $ronchi;
+    text-decoration: underline;
+  }
+}
+.has-header-image {
+  .intro-text {
+    color: $white;
+    a, a:visited {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Flex Content
+.content-section {
+  border-bottom-color: $ronchi;
+  overflow: auto;
+  &--title {
+    h2 {
+      color: $white;
+    }
+  }
+  .flex-newsfeed &--title {
+    background-color: $mojo;
+  }
+  .flex-map &--title {
+    background-color: $shakespeare;
+    color: $white;
+    @include medium {
+      background-color: rgba($shakespeare, .9);
+    }
+  }
+  .flex-twitter &--title {
+    background-color: $endeavour;
+    @include medium {
+      background-color: rgba($endeavour, .9);
+    }
+  }
+}
+.flex {
+  &-newsfeed {
+    background-color: $white;
+    .post--title {
+      background-color: rgba($jelly-bean, .95);
+      a {
+        color: $white;
+      }
+    }
+    .entry {
+      padding: 1rem .667em;
+    }
+  }
+  &-twitter {
+    background-color: $big-stone;
+  }
+  &-general {
+    background-color: $white;
+  }
+  &-callout {
+    &.theme_light {
+      background-color: $shakespeare;
+      color: $white;
+    }
+    &.theme_medium {
+      background-color: $mojo;
+      color: $white;
+    }
+    &.theme_dark {
+      background-color: $vivid-auburn;
+      color: $white;
+    }
+  }
+}
+
+// Form colors
+#{$all-text-inputs} {
+  background-color: $white;
+  border: 1px solid #aaa;
+
+  &:hover {
+    border-color: shade($endeavour, 20%);
+  }
+
+  &:focus {
+    border-color: $shakespeare;
+  }
+
+  &:disabled {
+    background-color: shade($white, 5%);
+
+    &:hover {
+      border-color: $endeavour;
+    }
+  }
+
+  &::placeholder {
+    color: tint($black, 40%);
+  }
+}
+
+button, input[type='submit'], .button {
+  @include hew-button( $white, $endeavour, $endeavour );
+  @include hew-button-size(ms(-1), ms(1), ms(1), 1.3);
+  text-transform: uppercase;
+  font-family: $font__default-heading-stack;
+  font-weight: $weight__bold;
+}
