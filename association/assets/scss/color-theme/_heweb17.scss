@@ -48,10 +48,18 @@ a:visited {
         background-color: $big-stone;
     }
 }
-#site-menu a {
-    &:hover {
-        background-color: $endeavour;
+#site-menu {
+  .current-menu-item {
+    a {
+      background-color: $endeavour;
     }
+  }
+  a {
+    &:hover {
+      background-color: $jelly-bean;
+    }
+  }
+
 }
 #related-links a {
   &:hover {
@@ -93,6 +101,9 @@ a:visited {
     @include medium {
       background-color: rgba($endeavour, .9);
     }
+  }
+  .flex-general &--title {
+    background-color: $endeavour;
   }
 }
 .flex {
@@ -162,4 +173,7 @@ button, input[type='submit'], .button {
   text-transform: uppercase;
   font-family: $font__default-heading-stack;
   font-weight: $weight__bold;
+}
+hr {
+  border-color: $desert;
 }

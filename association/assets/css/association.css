@@ -271,7 +271,7 @@ h1 {
       font-size: 55px; } }
 
 h2 {
-  font-size: 44px;
+  font-size: 35px;
   font-size: 37px; }
   @media (min-width: 400px) and (max-width: 900px) {
     h2 {
@@ -284,7 +284,7 @@ h2 {
       font-size: 44px; } }
 
 h3 {
-  font-size: 35px;
+  font-size: 28px;
   font-size: 31px; }
   @media (min-width: 400px) and (max-width: 900px) {
     h3 {
@@ -336,6 +336,24 @@ h6 {
     h6 {
       font-size: 18px; } }
 
+.entry ul {
+  padding-left: 28px;
+  margin-bottom: 35px; }
+  .entry ul li {
+    list-style: disc outside;
+    font-size: 18px; }
+
+i, em {
+  font-style: italic; }
+
+strong, b {
+  font-weight: 700; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid; }
+
 /*--------------------------------------------------------------
 2.0 Accessibility
 --------------------------------------------------------------*/
@@ -386,6 +404,14 @@ h6 {
        object-fit: cover;
     -o-object-position: center top;
        object-position: center top; }
+
+.alignleft {
+  float: left;
+  margin: 0 23px 23px 0; }
+
+.alignright {
+  float: right;
+  margin: 0 0 23px 23px; }
 
 fieldset {
   background-color: transparent;
@@ -624,7 +650,7 @@ button.menu-toggle {
   position: relative;
   width: 100%;
   display: block;
-  overflow: auto; }
+  overflow: hidden; }
   .page-header .intro-text {
     font-family: "myriad-pro-condensed", "Myriad Pro", "Helvetica Neue", Verdana, sans-serif;
     line-height: 1.467;
@@ -647,7 +673,7 @@ button.menu-toggle {
         max-width: 95%; } }
     @media (min-width: 1190px) {
       .page-header .intro-text {
-        margin-top: 15.5%;
+        margin-top: 21.5%;
         padding: 1.222em 1em 2.222em;
         font-size: 28px;
         width: 100%;
@@ -961,8 +987,11 @@ a:visited {
   #masthead .site-menu-group {
     background-color: #1a2c3e; }
 
-#site-menu a:hover {
+#site-menu .current-menu-item a {
   background-color: #2f5b88; }
+
+#site-menu a:hover {
+  background-color: #407597; }
 
 #related-links a:hover {
   color: #e3c351;
@@ -992,6 +1021,8 @@ a:visited {
     @media (min-width: 800px) {
       .flex-twitter .content-section--title {
         background-color: rgba(47, 91, 136, 0.9); } }
+  .flex-general .content-section--title {
+    background-color: #2f5b88; }
 
 .flex-newsfeed {
   background-color: #fffffe; }
@@ -1083,6 +1114,9 @@ button, input[type='submit'], .button {
   fieldset[disabled] .button.active {
     background-color: #2f5b88;
     border-color: #2f5b88; }
+
+hr {
+  border-color: #a0653c; }
 
 .page-template-layout-registration .row {
   display: -webkit-box;

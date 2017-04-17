@@ -12,7 +12,7 @@
  * @version 1.0
  */ ?>
 <header class="page-header">
-  <?php if ( get_header_image() ) : ?>
+  <?php if ( association_has_acf_header() ) : ?>
   <div class="custom-header-image image--fit-container">
       <?php echo association_custom_header(); ?>
   </div>

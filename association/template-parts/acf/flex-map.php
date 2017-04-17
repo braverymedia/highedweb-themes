@@ -15,12 +15,14 @@
 ?>
 
 <section id="<?php sanitize_title_with_dashes( $section_title ); ?>" class="flex-map content-section">
-  <header class="content-section--title">
-    <h2><?php echo $section_title; ?></h2>
-    <div class="content-section--description">
-      <?php echo $section_description; ?>
-    </div>
-  </header>
+  <?php if ( $section_title ) { ?>
+    <header class="content-section--title">
+      <h2><?php echo $section_title; ?></h2>
+      <div class="content-section--description">
+        <?php echo $section_description; ?>
+      </div>
+    </header>
+  <?php } ?>
     <?php if( have_rows('map') ): ?>
   	<div class="acf-map">
   		<?php while ( have_rows('map') ) : the_row();

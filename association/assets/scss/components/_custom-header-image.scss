@@ -48,7 +48,7 @@
   position: relative;
   width: 100%;
   display: block;
-  overflow: auto;
+  overflow: hidden;
   .intro-text {
     font-family: $font__default-heading-stack;
     line-height: 1.467;
@@ -71,7 +71,7 @@
       max-width: 95%;
     }
     @include large() {
-      margin-top: 15.5%;
+      margin-top: 21.5%;
       padding: 1.222em 1em 2.222em;
       font-size: ms(2);
       width: 100%;

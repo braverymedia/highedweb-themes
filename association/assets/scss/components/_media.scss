@@ -9,3 +9,11 @@
     object-position: center top;
   }
 }
+.alignleft {
+  float: left;
+  margin: 0 ms(1) ms(1) 0;
+}
+.alignright {
+    float: right;
+    margin: 0 0 ms(1) ms(1);
+}
