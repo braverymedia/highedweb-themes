@@ -142,8 +142,18 @@ input {
   }
 }
 
+// on reg form, match trying-to-be-too-cool link underlining from twentyseventeen... that doesn't actually go on all body links...
+#primary a {
+    -webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+    box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+    -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+}
+
 // Abide error classes
-.error {
+.error, .error label  {
     color: $red;
 }
 [data-abide] span.error, [data-abide] small.error {

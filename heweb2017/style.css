@@ -181,7 +181,13 @@ input + button {
 input + input[type="reset"] {
   padding: 0.75em 2em; }
 
-.error {
+#primary a {
+  box-shadow: inset 0 -1px 0 #0f0f0f;
+  -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  -webkit-transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+  transition: color 80ms ease-in, box-shadow 130ms ease-in-out; }
+
+.error, .error label {
   color: #B1171C; }
 
 [data-abide] span.error, [data-abide] small.error {
