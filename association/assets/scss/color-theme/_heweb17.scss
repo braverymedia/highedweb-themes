@@ -7,7 +7,7 @@ $romance: #fffffe;
 $brandy-punch: #c47f3f;
 $milano-red: #a13230;
 $ecstasy: #c1623a;
-$tussock: #d29e46;
+$tussock: #E4A223;
 $desert: #a0653c;
 $mojo: #bb4635;
 $ronchi: #e3c351;
@@ -34,6 +34,10 @@ a {
 }
 a:visited {
     color: $mojo;
+}
+
+.icon {
+  fill: $white;
 }
 
 #masthead {
@@ -129,6 +133,13 @@ a:visited {
     &.theme_light {
       background-color: $shakespeare;
       color: $white;
+      .button {
+        background-color: #e4a223;
+        border-color: $white;
+        &:hover {
+          background-color: darken(#e4a223, 10%);
+        }
+      }
     }
     &.theme_medium {
       background-color: $mojo;
@@ -140,6 +151,29 @@ a:visited {
     }
   }
 }
+
+// Twitter Card
+.tweet-card {
+  background-color: rgba($white, .83);
+  .username {
+    color: $black;
+    line-height: 1;
+  }
+  .screen-name {
+    a {
+      color: lighten($black, 40%);
+    }
+  }
+  .date {
+    &, > a {
+      color: #4C4C4C;
+    }
+    > a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 
 // Form colors
 #{$all-text-inputs} {

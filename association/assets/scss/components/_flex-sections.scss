@@ -87,7 +87,8 @@
         margin-bottom: ms(3);
       }
       .button {
-        font-size: ms(2);
+        @include hew-button-size(ms(-1), ms(6), ms(3), 1.1);
+        border: 4px solid;
       }
     }
     @include medium {
@@ -137,6 +138,9 @@
 }
 .flex {
   &-newsfeed {
+    .sharedaddy {
+      margin-top: ms(-1);
+    }
     .post {
       margin: 1.167em 0 2.389em;
       &--image-heading {
@@ -199,15 +203,98 @@
       text-transform: uppercase;
       text-align: center;
       vertical-align: middle;
-      display: inline-flex;
       .icon {
         width: 23px;
         height: 18px;
-        margin: 0 .3em;
+        margin: 0 .3em 0 0;
+        transform: translateY(3px);
       }
       @include small-only {
         display: none;
       }
     }
+  }
+}
+
+// Twitter grid
+#twitter-grid {
+  position: relative;
+  z-index: 2;
+  .card-group {
+    padding: 1.833em .998em;
+    @include medium() {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: stretch;
+      .tweet-card {
+        flex: 1 40%;
+        max-width: 50%;
+        margin: .998em;
+      }
+    }
+    @include large {
+      .tweet-card {
+        flex: 1 30%;
+        max-width: 50%;
+        margin: .998em;
+      }
+    }
+  }
+}
+
+.tweet-card {
+  border-radius: 4px;
+  padding: ms(-1);
+  .backdropfilter & {
+    backdrop-filter: blur(10px);
+  }
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-bottom: ms(2);
+    img {
+      flex: 0;
+      border-radius: 4px;
+      height: 45px;
+      width: 45px;
+      margin-right: ms(-1);
+    }
+    .u-name {
+      flex: 2;
+      align-self: center;
+    }
+  }
+  .username {
+    font-size: ms(0);
+    font-weight: $weight__bold;
+    display: block;
+  }
+  .screen-name {
+    display: block;
+    font-size: ms(-1);
+    a {
+      text-decoration: none;
+    }
+  }
+  .icon.icon-twitter-bird {
+    width: 19px;
+    height: 16px;
+    fill: #00aced;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .date {
+    flex: 1;
+    font-size: ms(-1);
+    font-weight: $weight__bold;
+    text-align: right;
+    a {
+      text-decoration: none;
+    }
+  }
+  .tweet-content {
+    margin-bottom: ms(2);
   }
 }

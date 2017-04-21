@@ -97,7 +97,7 @@
         // Fetch tweets
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, hashtag: settings.hashtag, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
             that.find('span').fadeOut('fast', function () {
-                that.html('<ul></ul>');
+                that.html('<div class="card-group"></div>');
 
                 for (var i = 0; i < settings.count; i++) {
                     var tweet = false;
@@ -119,7 +119,7 @@
                         screen_name: linking('@'+ tweet.user.screen_name)
                     };
 
-                    that.find('ul').append('<li>' + templating(temp_data) + '</li>');
+                    that.find('.card-group').append('<article class="tweet-card">' + templating(temp_data) + '</article>');
                 }
 
                 if (typeof callback === 'function') { callback(); }

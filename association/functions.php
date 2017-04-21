@@ -191,7 +191,7 @@ function association_scripts() {
       wp_enqueue_script('acf-map', get_stylesheet_directory_uri().'/assets/js/min/acf-map.min.js', array('jquery'), false, true);
     }
     if ( association_has_layout( 'association_twitter_feed' ) ) {
-      wp_enqueue_script('tweetie', get_stylesheet_directory_uri() . '/inc/tweetie/tweetie.js', array('jquery'), false, true );
+      wp_enqueue_script('tweetie', get_stylesheet_directory_uri() . '/inc/tweetie/min/tweetie.min.js', array('jquery'), false, true );
       // Tweetie API data
       $tweetie_api = array(
       	'apiPath' => get_stylesheet_directory_uri() . '/inc/tweetie/api/tweet.php',
@@ -335,6 +335,11 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 /**
+ * Shortcodes.
+ */
+require get_parent_theme_file_path( '/inc/shortcode.php' );
+
+/**
  * Tweetie Twitter API.
  */
-// require get_parent_theme_file_path( '/inc/tweetie/api/config.php' );
+require get_parent_theme_file_path( '/inc/tweetie/api/config.php' );
