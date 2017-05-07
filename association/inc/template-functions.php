@@ -58,29 +58,18 @@ function association_is_frontpage() {
 }
 
 /**
- * Relabel our Posts menus.
+ * Keeps HTML when auto-generating the_excerpt()
  */
-function association_change_post_menu_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Announcements';
-    $submenu['edit.php'][5][0] = 'Announcements';
-    $submenu['edit.php'][10][0] = 'Add Announcements';
-    echo '';
+function association_excerpt_markup($text) {
+  global $post;
+	if ( '' == $text ) {
+    $text = get_the_content('');
+    $text = apply_filters('the_content', $text);
+    $text = str_replace('\]\]\>', ']]&gt;', $text);
+    $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+    $text = strip_tags($text, '<a>');
+  }
+  return $text;
 }
-function association_change_post_object_label() {
-        global $wp_post_types;
-        $labels = &$wp_post_types['post']->labels;
-        $labels->name = 'Announcements';
-        $labels->singular_name = 'Announcement';
-        $labels->add_new = 'Add Announcement';
-        $labels->add_new_item = 'Add Announcement';
-        $labels->edit_item = 'Edit Announcement';
-        $labels->new_item = 'Announcement';
-        $labels->view_item = 'View Announcement';
-        $labels->search_items = 'Search Announcements';
-        $labels->not_found = 'No Announcements found';
-        $labels->not_found_in_trash = 'No Announcements found in Trash';
-}
-add_action( 'init', 'association_change_post_object_label' );
-add_action( 'admin_menu', 'association_change_post_menu_label' );
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'association_excerpt_markup');

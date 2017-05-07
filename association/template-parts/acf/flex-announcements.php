@@ -28,19 +28,24 @@
   <header class="content-section--title">
     <h2><?php echo $section_title; ?></h2>
   </header>
-  <?php while ( $a->have_posts() ) : ?>
   <div class="news-articles">
+  <?php while ( $a->have_posts() ) : ?>
     <?php $a->the_post(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="post--image-heading">
           <?php if ( has_post_thumbnail() ) {
             the_post_thumbnail('large');
           } ?>
-          <h3 class="post--title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+          <h3 class="post--title"><?php the_title(); ?></h3>
         </header>
         <div class="entry">
           <?php the_excerpt(); ?>
         </div>
+        <?php
+          if ( function_exists( 'sharing_display' ) ) {
+              sharing_display( '', true );
+          }
+        ?>
       </article>
     <?php endwhile; wp_reset_postdata(); ?>
   </div>

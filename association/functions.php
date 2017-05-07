@@ -335,6 +335,11 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 /**
+ * Extra configurations.
+ */
+require get_parent_theme_file_path( '/inc/extras.php' );
+
+/**
  * Shortcodes.
  */
 require get_parent_theme_file_path( '/inc/shortcode.php' );

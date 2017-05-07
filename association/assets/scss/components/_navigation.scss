@@ -62,6 +62,10 @@ ul.menu {
           }
         }
     }
+    .nav-callout a {
+      text-transform: uppercase;
+      font-weight: $weight__bold;
+    }
 }
 button.menu-toggle {
     display: none;
@@ -97,11 +101,13 @@ button.menu-toggle {
         display: block;
         position: fixed;
         z-index: 100;
-        top: .95em;
-        left: .65em;
+        top: .7em;
+        left: .4em;
+        padding: .5em .25em;
+        line-height: 0;
         .icon {
-            width: 35px;
-            height: 20px;
+            width: 40px;
+            height: 27px;
         }
     }
     body.menu-open {

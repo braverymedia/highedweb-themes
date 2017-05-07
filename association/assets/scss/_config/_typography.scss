@@ -46,13 +46,18 @@ h6 {
     @include ms-respond(font-size, 0);
     font-weight: 600;
 }
-.entry {
+.site-main {
   ul {
-    padding-left: ms(2);
-    margin-bottom: ms(3);
+    margin-bottom: ms(2);
     li {
-      list-style: disc outside;
+      position: relative;
       font-size: ms(0);
+      padding-left: ms(2);
+      &:before {
+        content: "\2022";
+        position: absolute;
+        left: 0;
+      }
     }
   }
 }

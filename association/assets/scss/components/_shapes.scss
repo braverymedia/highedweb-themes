@@ -1,0 +1,11 @@
+.teardrop {
+  display: block;
+  box-sizing: content-box;
+  width: 10em;
+  height: 10em;
+  border: none;
+  border-radius: 90% 0 55% 50% / 55% 0 90% 50%;
+  text-overflow: clip;
+  transform-origin: -20% 50%;
+  transform: rotate(45deg) translateX(-70%);
+}

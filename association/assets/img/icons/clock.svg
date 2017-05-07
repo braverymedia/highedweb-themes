@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>ui-24px-outline-2_time-clock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Schedule" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Desktop-HD" transform="translate(-1405.000000, -468.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="jump-menu" transform="translate(249.000000, 452.000000)">
+                <g id="download" transform="translate(1009.000000, 0.000000)">
+                    <g id="ui-24px-outline-2_time-clock" transform="translate(147.000000, 16.000000)">
+                        <polygon id="Shape" points="10.0833333 0.916666667 10.0833333 4.58333333 11.9166667 4.58333333 11.9166667 0.916666667"></polygon>
+                        <polygon id="Shape" points="21.0833333 10.0833333 17.4166667 10.0833333 17.4166667 11.9166667 21.0833333 11.9166667"></polygon>
+                        <polygon id="Shape" points="11.9166667 21.0833333 11.9166667 17.4166667 10.0833333 17.4166667 10.0833333 21.0833333"></polygon>
+                        <polygon id="Shape" points="0.916666667 11.9166667 4.58333333 11.9166667 4.58333333 10.0833333 0.916666667 10.0833333"></polygon>
+                        <path d="M11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 Z M11,20.1666667 C16.0626102,20.1666667 20.1666667,16.0626102 20.1666667,11 C20.1666667,5.93738979 16.0626102,1.83333333 11,1.83333333 C5.93738979,1.83333333 1.83333333,5.93738979 1.83333333,11 C1.83333333,16.0626102 5.93738979,20.1666667 11,20.1666667 Z" id="Oval"></path>
+                        <polygon id="Shape" points="11.4905851 10.0833333 7.58757092 4.22881205 6.06214538 5.24576241 10.5094149 11.9166667 15.5833333 11.9166667 15.5833333 10.0833333"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

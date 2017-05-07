@@ -13,7 +13,7 @@ $mojo: #bb4635;
 $ronchi: #e3c351;
 $vivid-auburn: #912b2a;
 $white: $romance;
-$black: #000;
+$black: #2c2c2c;
 
 body {
   background-color: $big-stone;
@@ -39,7 +39,9 @@ a:visited {
 .icon {
   fill: $white;
 }
-
+.teardrop {
+  background-color: $mojo;
+}
 #masthead {
     color: $white;
     a {
@@ -58,7 +60,11 @@ a:visited {
       background-color: $endeavour;
     }
   }
+  .nav-callout a {
+    color: $ronchi;
+  }
   a {
+    position: relative;
     &:hover {
       background-color: $jelly-bean;
     }
@@ -115,6 +121,7 @@ a:visited {
     background-color: $white;
     .post--title {
       background-color: rgba($jelly-bean, .95);
+      color: $white;
       a {
         color: $white;
       }
@@ -210,4 +217,95 @@ button, input[type='submit'], .button {
 }
 hr {
   border-color: $desert;
+}
+// sponsorship
+.sponsor-group {
+  background-color: $white;
+}
+.page-template-layout-sponsorship {
+  .site-main {
+    h2 {
+      color: $vivid-auburn;
+    }
+    h3 {
+      color: $milano-red;
+    }
+    h4 {
+      color: $ecstasy;
+    }
+  }
+  .packages--intro {
+    border-color: $vivid-auburn;
+  }
+  .price-cluster {
+    .price {
+      color: $ecstasy !important;
+    }
+  }
+  .sponsor-package {
+    &--additions {
+      .teardrop {
+        background-color: $ecstasy;
+      }
+      .price-cluster {
+        h3 {
+          color: $ecstasy;
+        }
+        .opportunity--subhead {
+          color: $vivid-auburn;
+        }
+      }
+    }
+  }
+}
+
+button.menu-toggle {
+    background-color: rgba($vivid-auburn, .65);
+    backdrop-filter: invert(80%);
+}
+
+.jump-menu {
+  background: rgba(#000, .75);
+  color: $white;
+  a {
+    color: $white;
+  }
+  @include medium-down {
+    &.open {
+      background-color: $brandy-punch;
+    }
+    button {
+      border-color: $big-stone;
+    }
+  }
+  button {
+    background-color: transparent;
+    &.active {
+      background-color: $endeavour;
+    }
+  }
+}
+
+.page-template-layout-schedule {
+  .site-main {
+    background-color: $white;
+  }
+  .day-heading {
+    background-color: $vivid-auburn;
+    color: $white;
+  }
+  .schedule {
+    .time-block {
+      background-color: $big-stone;
+      color: $white;
+    }
+    .event--location {
+      color: lighten($black, 30%);
+    }
+    .event--heading {
+      .icon {
+        fill: $black;
+      }
+    }
+  }
 }

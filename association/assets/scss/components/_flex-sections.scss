@@ -246,6 +246,7 @@
 .tweet-card {
   border-radius: 4px;
   padding: ms(-1);
+  margin-bottom: 1em;
   .backdropfilter & {
     backdrop-filter: blur(10px);
   }
@@ -286,12 +287,15 @@
     margin-right: 5px;
   }
   .date {
-    flex: 1;
-    font-size: ms(-1);
+    flex: 1 0 15%;
+    font-size: ms(-2);
     font-weight: $weight__bold;
     text-align: right;
     a {
       text-decoration: none;
+    }
+    @include medium {
+      font-size: ms(-1);
     }
   }
   .tweet-content {

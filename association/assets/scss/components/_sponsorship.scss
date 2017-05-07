@@ -1,0 +1,135 @@
+#overview {
+  @include medium {
+    .sponsor-info {
+      &.overview--attendees {
+        ul {
+          columns: 2;
+        }
+      }
+    }
+  }
+  @include large {
+    padding: 1.222em 1em 2.222em;
+    .sponsor-info {
+      width: 60%;
+      margin-left: 40%;
+      &.overview--conference {
+        width: 35%;
+        float: left;
+        margin-left: auto;
+      }
+    }
+  }
+}
+.page-template-layout-sponsorship {
+  .sponsor-group {
+    overflow: hidden; // to keep teardrops full bleed;
+  }
+  .packages--intro {
+    text-align: center;
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    @include medium {
+      padding: 1.833em $_fg_gutter;
+      .intro-copy {
+        width: 95%;
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: ms(0);
+        p {
+          margin-bottom: 1rem;
+          font-size: 1.25rem;
+        }
+      }
+    }
+    @include large {
+      padding: 1.222em 1em 2.222em;
+    }
+  }
+  .sponsor-package {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    .teardrop {
+      position: absolute;
+      left: 0;
+    }
+    .price-cluster {
+      h3, .price {
+        line-height: .9;
+        letter-spacing: -.01em;
+        margin-bottom: .15em;
+      }
+      .price {
+        display: block;
+        @extend h3;
+        letter-spacing: .03em;
+      }
+      .availability {
+        font-weight: $weight__bold;
+        font-size: ms(-1);
+      }
+    }
+    &--details {
+      .description {
+        font-style: italic;
+        font-size: 1.1em;
+        margin-bottom: ms(1);
+      }
+      .benefits {
+        font-size: .935em;
+      }
+    }
+    &--additions {
+      .teardrop {
+        position: absolute;
+        right: 0;
+        left: auto;
+        transform-origin: -70% -30%;
+        transform: rotate(225deg) translateX(-310%);
+      }
+      .opportunity {
+        display: flex;
+        margin-bottom: 3em;
+        &--subhead {
+          font-weight: $weight__bold;
+          text-transform: uppercase;
+          font-family: $font__default-heading-stack;
+          font-size: ms(-1);
+          letter-spacing: .01em;
+          display: block;
+          line-height: .8;
+        }
+      }
+    }
+    @include medium {
+      padding: 1.833em 1rem;
+      &--heading {
+        margin-top: 7em;
+        flex: 0 1 15%;
+        width: 15%;
+        padding: 1.833em 1rem;
+      }
+      &--details {
+        padding: 1.833em 1rem;
+        flex: 0 1 75%;
+        width: 75%;
+      }
+      &--additions {
+        .opportunity {
+          .sponsor-package--heading {
+            order: 2;
+            margin-top: auto;
+            align-self: middle;
+          }
+          .benefits {
+            padding: 1.833em 1rem;
+            flex: 0 1 75%;
+            width: 75%;
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}
