@@ -634,6 +634,10 @@ button.menu-toggle {
   .jump-menu menu {
     height: 0;
     visibility: hidden; }
+    @media (min-width: 800px) {
+      .jump-menu menu {
+        visibility: visible;
+        height: auto; } }
   .jump-menu.open menu {
     height: auto;
     visibility: visible; }
@@ -1288,28 +1292,85 @@ button.menu-toggle {
 #track-filter {
   position: absolute;
   width: 15%;
-  right: 0; }
+  right: 1.8rem;
+  top: 490px; }
   @media (max-width: 799px) {
     #track-filter {
       display: none; } }
+  #track-filter h4 {
+    font-size: 14px;
+    margin-bottom: .6rem; }
+  #track-filter .track-list li.track-code {
+    padding-left: 2rem;
+    font-size: .68rem;
+    line-height: 1.3;
+    margin-bottom: .5rem; }
+    #track-filter .track-list li.track-code:before {
+      font-weight: 700;
+      padding: 0 3px;
+      border-radius: 3px;
+      line-height: 1.4;
+      width: 25px;
+      text-align: center;
+      font-size: 9px; }
+    #track-filter .track-list li.track-code--wrk:before {
+      content: "WRK"; }
+    #track-filter .track-list li.track-code--aim:before {
+      content: "AIM"; }
+    #track-filter .track-list li.track-code--dpa:before {
+      content: "DPA"; }
+    #track-filter .track-list li.track-code--mcs:before {
+      content: "MCS"; }
+    #track-filter .track-list li.track-code--mpd:before {
+      content: "MPD"; }
+    #track-filter .track-list li.track-code--tie:before {
+      content: "TIE"; }
+    #track-filter .track-list li.track-code--uad:before {
+      content: "UAD"; }
+    #track-filter .track-list li.track-code--cor:before {
+      content: "COR"; }
 
 .page-template-layout-schedule .day-heading h2 {
   font-size: 28px;
-  padding: .75rem 1rem; }
+  padding: .5rem 1rem; }
   @media (min-width: 800px) {
     .page-template-layout-schedule .day-heading h2 {
-      padding: .75rem 1.8rem; } }
+      padding: .5rem 1.8rem; } }
 
 .page-template-layout-schedule .schedule {
   margin: 1rem 0 28px; }
   .page-template-layout-schedule .schedule--event {
     padding-bottom: 35px; }
+    @media (min-width: 800px) {
+      .page-template-layout-schedule .schedule--event {
+        border-top: 5px solid;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; } }
   .page-template-layout-schedule .schedule .time-block {
     font-family: "myriad-pro-condensed", "Myriad Pro", "Helvetica Neue", Verdana, sans-serif;
     font-weight: 700;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem .75rem;
     font-size: 18px;
     margin-bottom: 18px; }
+    @media (min-width: 800px) {
+      .page-template-layout-schedule .schedule .time-block {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        width: 35%;
+        line-height: 1.3;
+        margin-bottom: 0; } }
   @media (min-width: 800px) {
     .page-template-layout-schedule .schedule {
       margin: 1.8rem; } }
@@ -1341,7 +1402,53 @@ button.menu-toggle {
       .page-template-layout-schedule .schedule .event--heading div h2 {
         font-weight: 400;
         font-size: 23px;
-        line-height: 1.2; }
+        line-height: 1.2;
+        text-transform: none; }
+    @media (min-width: 800px) {
+      .page-template-layout-schedule .schedule .event--heading {
+        padding-top: 1rem;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 auto;
+                flex: 1 auto;
+        width: 65%; } }
+  .page-template-layout-schedule .schedule .event-type--session .event--heading,
+  .page-template-layout-schedule .schedule .event-type--session .session {
+    padding: .75rem 1rem; }
+  .page-template-layout-schedule .schedule .event-type--session .session {
+    border-top: 2px solid; }
+    .page-template-layout-schedule .schedule .event-type--session .session h3, .page-template-layout-schedule .schedule .event-type--session .session .page-template-layout-sponsorship .sponsor-package .price-cluster .price, .page-template-layout-sponsorship .sponsor-package .price-cluster .page-template-layout-schedule .schedule .event-type--session .session .price {
+      line-height: 1.2;
+      font-size: 23px;
+      font-family: myriad-pro, "Myriad Pro", "Helvetica Neue", Verdana, sans-serif;
+      text-decoration: underline;
+      margin-bottom: .5rem; }
+    .page-template-layout-schedule .schedule .event-type--session .session h4 {
+      line-height: 1.2;
+      font-size: 18px; }
+    .page-template-layout-schedule .schedule .event-type--session .session > header {
+      line-height: 1;
+      margin-bottom: 1rem; }
+    .page-template-layout-schedule .schedule .event-type--session .session--presenter {
+      font-weight: 700;
+      font-size: 14px; }
+    .page-template-layout-schedule .schedule .event-type--session .session--location {
+      font-size: 14px; }
+    @media (min-width: 800px) {
+      .page-template-layout-schedule .schedule .event-type--session .session {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+        width: 77%;
+        padding: .5rem 0 1.8rem; } }
+  @media (min-width: 800px) {
+    .page-template-layout-schedule .schedule {
+      width: 70%; } }
+
+.page-template-layout-schedule span[class*="track-code--"] {
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700; }
 
 @media (min-width: 800px) {
   body #masthead {
@@ -1617,6 +1724,9 @@ button.menu-toggle {
   background-color: #912b2a;
   color: #fffffe; }
 
+.page-template-layout-schedule .schedule--event {
+  border-color: #1a2c3e; }
+
 .page-template-layout-schedule .schedule .time-block {
   background-color: #1a2c3e;
   color: #fffffe; }
@@ -1626,6 +1736,66 @@ button.menu-toggle {
 
 .page-template-layout-schedule .schedule .event--heading .icon {
   fill: #2c2c2c; }
+
+.page-template-layout-schedule .schedule .event-type--session .session {
+  border-color: #969696; }
+  .page-template-layout-schedule .schedule .event-type--session .session h3, .page-template-layout-schedule .schedule .event-type--session .session .page-template-layout-sponsorship .sponsor-package .price-cluster .price, .page-template-layout-sponsorship .sponsor-package .price-cluster .page-template-layout-schedule .schedule .event-type--session .session .price {
+    color: #407597; }
+
+.page-template-layout-schedule span[class*="track-code--"],
+.page-template-layout-schedule li[class*="track-code--"]:before {
+  color: #fffffe; }
+
+.page-template-layout-schedule span.track-code--wrk {
+  background-color: #1a2c3e; }
+
+.page-template-layout-schedule span.track-code--aim {
+  background-color: #2f5b88; }
+
+.page-template-layout-schedule span.track-code--dpa {
+  background-color: #542F88; }
+
+.page-template-layout-schedule span.track-code--mcs {
+  background-color: #9B3AA4; }
+
+.page-template-layout-schedule span.track-code--mpd {
+  background-color: #c1623a; }
+
+.page-template-layout-schedule span.track-code--tie {
+  background-color: #E4A223; }
+
+.page-template-layout-schedule span.track-code--uad {
+  background-color: #44882F; }
+
+.page-template-layout-schedule span.track-code--cor {
+  background-color: #000; }
+
+li.track-code--wrk:before {
+  background-color: #1a2c3e; }
+
+li.track-code--aim:before {
+  background-color: #2f5b88; }
+
+li.track-code--dpa:before {
+  background-color: #542F88; }
+
+li.track-code--mcs:before {
+  background-color: #9B3AA4; }
+
+li.track-code--mpd:before {
+  background-color: #c1623a; }
+
+li.track-code--tie:before {
+  background-color: #E4A223; }
+
+li.track-code--uad:before {
+  background-color: #44882F; }
+
+li.track-code--cor:before {
+  background-color: #000; }
+
+#track-filter h4 {
+  color: #912b2a; }
 
 .page-template-layout-registration .row {
   display: -webkit-box;

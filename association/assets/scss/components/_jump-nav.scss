@@ -13,6 +13,10 @@
   menu {
     height: 0;
     visibility: hidden;
+    @include medium {
+      visibility: visible;
+      height: auto;
+    }
   }
   &.open {
     menu {

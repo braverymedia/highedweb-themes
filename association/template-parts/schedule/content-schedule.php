@@ -81,20 +81,22 @@
           <!-- @TODO prep for schedule editor -->
           <span class="track-code--wrk">WRK1</span>
         </div>
-        <header>
-          <div class="session--title">
-            <h3>A Syntactically Awesome Deep Dive into Sass</h3>
-            <span class="session--presenter">Presented by Joel Goodman</span>
+        <section class="session--object">
+          <header>
+            <div class="session--title">
+              <h3>A Syntactically Awesome Deep Dive into Sass</h3>
+              <span class="session--presenter">Presented by Joel Goodman</span>
+            </div>
+            <span class="session--location">Capitol Room 1, Marriott Downtown</span>
+          </header>
+          <div class="session--details">
+            <!-- Session description here Make sure it's wrapped in proper <p>
+             tags, please! -->
+            <h4>About Joel Goodman</h4>
+            <!-- Speaker bio here. Make sure it's wrapped in proper <p>
+             tags, please! -->
           </div>
-          <span class="session--location">Capitol Room 1, Marriott Downtown</span>
-        </header>
-        <div class="session--details">
-          <!-- Session description here Make sure it's wrapped in proper <p>
-           tags, please! -->
-          <h4>About Joel Goodman</h4>
-          <!-- Speaker bio here. Make sure it's wrapped in proper <p>
-           tags, please! -->
-        </div>
+        </section>
       </div>
     </article>
 
@@ -112,4 +114,18 @@
       </header>
     </article>
   </div>
+</section>
+<section id="single-session-detail" class="session--single-description">
+  <header class="single-heading session--title">
+    <h1>{{A Syntactically Awesome Deep Dive into Sass}}</h1>
+    <span class="session--presenter">Presented by Joel Goodman</span> <span class="session--location">Capitol Room 1, Marriott Downtown</span>
+  </header>
+  <article class="single-entry">
+    <!-- Session description here Make sure it's wrapped in proper <p>
+     tags, please! -->
+     
+     <h4>About Joel Goodman</h4>
+     <!-- Speaker bio here. Make sure it's wrapped in proper <p>
+      tags, please! -->
+  </article>
 </section>

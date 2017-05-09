@@ -15,6 +15,16 @@ $vivid-auburn: #912b2a;
 $white: $romance;
 $black: #2c2c2c;
 
+// Track Colors
+$wrk: $big-stone;
+$aim: $endeavour;
+$dpa: #542F88;
+$mcs: #9B3AA4;
+$mpd: $ecstasy;
+$tie: $tussock;
+$uad: #44882F;
+$cor: #000;
+
 body {
   background-color: $big-stone;
   font-family: $font__default-stack;
@@ -295,6 +305,9 @@ button.menu-toggle {
     color: $white;
   }
   .schedule {
+    &--event {
+      border-color: $big-stone;
+    }
     .time-block {
       background-color: $big-stone;
       color: $white;
@@ -307,5 +320,74 @@ button.menu-toggle {
         fill: $black;
       }
     }
+    .event-type--session {
+      .session {
+        border-color: #969696;
+        h3 {
+          color: $jelly-bean;
+        }
+      }
+    }
+  }
+  span[class*="track-code--"],
+  li[class*="track-code--"]:before {
+    color: $white;
+  }
+  span.track-code {
+    &--wrk {
+      background-color: $big-stone;
+    }
+    &--aim {
+      background-color: $endeavour;
+    }
+    &--dpa {
+      background-color: $dpa;
+    }
+    &--mcs {
+      background-color: $mcs;
+    }
+    &--mpd {
+      background-color: $mpd;
+    }
+    &--tie {
+      background-color: $tie;
+    }
+    &--uad {
+      background-color: $uad;
+    }
+    &--cor {
+      background-color: $cor;
+    }
+  }
+}
+li.track-code {
+  &--wrk:before {
+    background-color: $big-stone;
+  }
+  &--aim:before {
+    background-color: $endeavour;
+  }
+  &--dpa:before {
+    background-color: $dpa;
+  }
+  &--mcs:before {
+    background-color: $mcs;
+  }
+  &--mpd:before {
+    background-color: $mpd;
+  }
+  &--tie:before {
+    background-color: $tie;
+  }
+  &--uad:before {
+    background-color: $uad;
+  }
+  &--cor:before {
+    background-color: $cor;
+  }
+}
+#track-filter {
+  h4 {
+    color: $vivid-auburn;
   }
 }

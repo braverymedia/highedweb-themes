@@ -1,8 +1,54 @@
 #track-filter {
-    position: absolute;
-    width: 15%;
-    right: 0;
-    @include medium-down {
-      display: none;
+  @include medium-down {
+    display: none;
+  }
+  position: absolute;
+  width: 15%;
+  right: 1.8rem;
+  top: 490px;
+  h4 {
+    font-size: ms(-1);
+    margin-bottom: .6rem;
+  }
+  .track-list {
+    li.track-code {
+      padding-left: 2rem;
+      font-size: .68rem;
+      line-height: 1.3;
+      margin-bottom: .5rem;
+      &:before {
+        font-weight: $weight__bold;
+        padding: 0 3px;
+        border-radius: 3px;
+        line-height: 1.4;
+        width: 25px;
+        text-align: center;
+        font-size: ms(-3);
+      }
+      &--wrk:before {
+        content: "WRK";
+      }
+      &--aim:before {
+        content: "AIM";
+      }
+      &--dpa:before {
+        content: "DPA";
+      }
+      &--mcs:before {
+        content: "MCS";
+      }
+      &--mpd:before {
+        content: "MPD";
+      }
+      &--tie:before {
+        content: "TIE";
+      }
+      &--uad:before {
+        content: "UAD";
+      }
+      &--cor:before {
+        content: "COR";
+      }
     }
+  }
 }

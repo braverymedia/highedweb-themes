@@ -84,7 +84,7 @@ add_action('login_footer', 'brvry_login_footer_credit');
 
 // customize admin footer text
 function brvry_admin_footer() {
-	echo 'Make with <a href="http://braverymedia.co/?ref=ctheme" title="Made with Bravery" target="_blank">Bravery</a>.';
+	echo 'Made with <a href="http://braverymedia.co/?ref=ctheme" title="Made with Bravery" target="_blank">Bravery</a>.';
 }
 add_filter('admin_footer_text', 'brvry_admin_footer');
 
