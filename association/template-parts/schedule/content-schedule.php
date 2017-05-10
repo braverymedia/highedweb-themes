@@ -43,13 +43,15 @@
       <div class="time-block">
         <time datetime="2017-10-08T11:00">11:00 a.m.</time> to <time datetime="2017-10-08T17:30">5:30 p.m.</time>
       </div>
-      <header class="event--heading">
-        <svg class="icon icon-badge" aria-hidden="true" role="img"> <use href="#icon-badge" xlink:href="#icon-badge"></use></svg>
-        <div>
-          <h2>Conference check-in &amp; information desk</h2>
-          <span class="event--location">Room Name</span>
-        </div>
-      </header>
+      <section class="event-group">
+        <header class="event--heading">
+          <svg class="icon icon-badge" aria-hidden="true" role="img"> <use href="#icon-badge" xlink:href="#icon-badge"></use></svg>
+          <div>
+            <h2>Conference check-in &amp; information desk</h2>
+            <span class="event--location">Room Name</span>
+          </div>
+        </header>
+      </section>
     </article>
 
     <!-- Meal Event -->
@@ -57,13 +59,15 @@
       <div class="time-block">
         <time datetime="2017-10-08T12:00">12:00 p.m.</time> to <time datetime="2017-10-08T13:00">1:00 p.m.</time>
       </div>
-      <header class="event--heading">
-        <svg class="icon icon-meal" aria-hidden="true" role="img"> <use href="#icon-meal" xlink:href="#icon-meal"></use></svg>
-        <div>
-          <h2>Lunch for Academy attendees, pre-conference workshop  attendees and presenters</h2>
-          <span class="event--location">Room Name</span>
-        </div>
-      </header>
+      <section class="event-group">
+        <header class="event--heading">
+          <svg class="icon icon-meal" aria-hidden="true" role="img"> <use href="#icon-meal" xlink:href="#icon-meal"></use></svg>
+          <div>
+            <h2>Lunch for Academy attendees, pre-conference workshop  attendees and presenters</h2>
+            <span class="event--location">Room Name</span>
+          </div>
+        </header>
+      </section>
     </article>
 
     <!-- Sessions Event -->
@@ -71,33 +75,35 @@
       <div class="time-block">
         <time datetime="2017-10-08T13:00">1:00 p.m.</time> to <time datetime="2017-10-08T16:30">4:30 p.m.</time>
       </div>
-      <header class="event--heading">
-        <div>
-          <h2>Pre-Conference Workshops</h2>
-        </div>
-      </header>
-      <div class="session">
-        <div class="schedule-tools">
-          <!-- @TODO prep for schedule editor -->
-          <span class="track-code--wrk">WRK1</span>
-        </div>
-        <section class="session--object">
-          <header>
-            <div class="session--title">
-              <h3>A Syntactically Awesome Deep Dive into Sass</h3>
-              <span class="session--presenter">Presented by Joel Goodman</span>
-            </div>
-            <span class="session--location">Capitol Room 1, Marriott Downtown</span>
-          </header>
-          <div class="session--details">
-            <!-- Session description here Make sure it's wrapped in proper <p>
-             tags, please! -->
-            <h4>About Joel Goodman</h4>
-            <!-- Speaker bio here. Make sure it's wrapped in proper <p>
-             tags, please! -->
+      <section class="event-group">
+        <header class="event--heading">
+          <div>
+            <h2>Pre-Conference Workshops</h2>
           </div>
-        </section>
-      </div>
+        </header>
+        <div class="session">
+          <div class="schedule-tools">
+            <!-- @TODO prep for schedule editor -->
+            <span class="track-code--wrk">WRK1</span>
+          </div>
+          <section class="session--object">
+            <header>
+              <div class="session--title">
+                <h3>A Syntactically Awesome Deep Dive into Sass</h3>
+                <span class="session--presenter">Presented by Joel Goodman</span>
+              </div>
+              <span class="session--location">Capitol Room 1, Marriott Downtown</span>
+            </header>
+            <div class="session--details">
+              <!-- Session description here Make sure it's wrapped in proper <p>
+               tags, please! -->
+              <h4>About Joel Goodman</h4>
+              <!-- Speaker bio here. Make sure it's wrapped in proper <p>
+               tags, please! -->
+            </div>
+          </section>
+        </div>
+      </section>
     </article>
 
     <!-- Social/Networking Event -->
@@ -105,13 +111,15 @@
       <div class="time-block">
         <time datetime="2017-10-08T18:00">6:00 p.m.</time> to <time datetime="2017-10-08T21:00">9:00 p.m.</time>
       </div>
-      <header class="event--heading">
-        <svg class="icon icon-network" aria-hidden="true" role="img"> <use href="#icon-network" xlink:href="#icon-network"></use></svg>
-        <div>
-          <h2>Welcome Reception</h2>
-          <span class="event--location">Room Name</span>
-        </div>
-      </header>
+      <section class="event-group">
+        <header class="event--heading">
+          <svg class="icon icon-network" aria-hidden="true" role="img"> <use href="#icon-network" xlink:href="#icon-network"></use></svg>
+          <div>
+            <h2>Welcome Reception</h2>
+            <span class="event--location">Room Name</span>
+          </div>
+        </header>
+      </section>
     </article>
   </div>
 </section>
@@ -123,7 +131,7 @@
   <article class="single-entry">
     <!-- Session description here Make sure it's wrapped in proper <p>
      tags, please! -->
-     
+
      <h4>About Joel Goodman</h4>
      <!-- Speaker bio here. Make sure it's wrapped in proper <p>
       tags, please! -->
