@@ -29,6 +29,15 @@
     text-align: center;
     border-top: 10px solid;
     border-bottom: 10px solid;
+    @include medium-down {
+      padding: 1rem 1rem 1.5rem;
+      h2 {
+        font-size: ms(2);
+      }
+      .intro-copy {
+        font-size: ms(-1)
+      }
+    }
     @include medium {
       padding: 1.833em $_fg_gutter;
       .intro-copy {
@@ -48,11 +57,19 @@
   }
   .sponsor-package {
     position: relative;
-    display: flex;
-    flex-flow: row wrap;
+    @include medium-down {
+      padding: 1.2rem 1rem;
+    }
+    @include medium {
+      display: flex;
+      flex-flow: row wrap;
+    }
     .teardrop {
       position: absolute;
       left: 0;
+      @include medium-down {
+        display: none;
+      }
     }
     .price-cluster {
       h3, .price {
@@ -87,9 +104,11 @@
         left: auto;
         transform-origin: -70% -30%;
         transform: rotate(225deg) translateX(-310%);
+        @include medium-down {
+          display: none;
+        }
       }
       .opportunity {
-        display: flex;
         margin-bottom: 3em;
         &--subhead {
           font-weight: $weight__bold;
@@ -99,6 +118,9 @@
           letter-spacing: .01em;
           display: block;
           line-height: .8;
+        }
+        @include medium {
+          display: flex;
         }
       }
     }

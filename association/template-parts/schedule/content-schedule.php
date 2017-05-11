@@ -20,19 +20,6 @@
   </menu>
   <button id="custom-schedule" class="jump-link"><span>Your Schedule</span> <svg class="icon icon-clock" aria-hidden="true" role="img"> <use href="#icon-clock" xlink:href="#icon-clock"></use></svg></button>
 </nav>
-<div id="track-filter">
-  <h4>Filter by Track</h4>
-  <ul class="track-list">
-    <li class="track-code track-code--wrk">Workshops</li>
-    <li class="track-code track-code--aim">Applications, Integration and Mobile</li>
-    <li class="track-code track-code--dpa">Development, Programming and Architecture</li>
-    <li class="track-code track-code--mcs">Marketing, Content and Social Strategy</li>
-    <li class="track-code track-code--mpd">Management and Professional Development</li>
-    <li class="track-code track-code--tie">Technology in Education</li>
-    <li class="track-code track-code--uad">Usability, Accessibility and Design</li>
-    <li class="track-code track-code--cor">Sponsors</li>
-  </ul>
-</div>
 <section class="schedule--day" id="sunday">
   <header class="day-heading">
     <h2>Sunday, October 8</h2>
@@ -121,6 +108,21 @@
         </header>
       </section>
     </article>
+  </div>
+  <div id="track-filter">
+    <div class="filter-group">
+      <h4>Filter by Track</h4>
+      <ul class="track-list">
+        <li class="track-code track-code--wrk">Workshops</li>
+        <li class="track-code track-code--aim">Applications, Integration and Mobile</li>
+        <li class="track-code track-code--dpa">Development, Programming and Architecture</li>
+        <li class="track-code track-code--mcs">Marketing, Content and Social Strategy</li>
+        <li class="track-code track-code--mpd">Management and Professional Development</li>
+        <li class="track-code track-code--tie">Technology in Education</li>
+        <li class="track-code track-code--uad">Usability, Accessibility and Design</li>
+        <li class="track-code track-code--cor">Sponsors</li>
+      </ul>
+    </div>
   </div>
 </section>
 <section id="single-session-detail" class="session--single-description">

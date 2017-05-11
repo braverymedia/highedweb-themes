@@ -2,10 +2,12 @@
   @include medium-down {
     display: none;
   }
-  position: absolute;
+  flex: 1 15%;
   width: 15%;
-  right: 1.8rem;
-  top: 490px;
+  // right: 1.8rem;
+  // top: 490px;
+  position: relative;
+  margin: 1.8rem;
   h4 {
     font-size: ms(-1);
     margin-bottom: .6rem;
@@ -54,7 +56,6 @@
     }
   }
   @include large {
-    top: 605px;
     .track-list {
       li.track-code {
         font-size: ms(0);
