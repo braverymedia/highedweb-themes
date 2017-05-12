@@ -255,7 +255,8 @@ body {
 h1, h2, h3, .page-template-layout-sponsorship .sponsor-package .price-cluster .price, h4, h5, h6 {
   text-transform: uppercase;
   font-family: "myriad-pro-condensed", "Myriad Pro", "Helvetica Neue", Verdana, sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1.3; }
 
 h1 {
   font-size: 55px;
@@ -272,42 +273,42 @@ h1 {
 
 h2 {
   font-size: 35px;
-  font-size: 37px; }
+  font-size: 31px; }
   @media (min-width: 400px) and (max-width: 900px) {
     h2 {
-      font-size: calc( 37px + 14 * ( ( 100vw - 400px) / 500 )); } }
+      font-size: calc( 31px + 9 * ( ( 100vw - 400px) / 500 )); } }
   @media (min-width: 900px) and (max-width: 1200px) {
     h2 {
-      font-size: calc( 51px + -7 * ( ( 100vw - 900px) / 300 )); } }
+      font-size: calc( 40px + -5 * ( ( 100vw - 900px) / 300 )); } }
   @media (min-width: 1200px) {
     h2 {
-      font-size: 44px; } }
+      font-size: 35px; } }
 
 h3, .page-template-layout-sponsorship .sponsor-package .price-cluster .price {
   font-size: 28px;
-  font-size: 31px; }
+  font-size: 26px; }
   @media (min-width: 400px) and (max-width: 900px) {
     h3, .page-template-layout-sponsorship .sponsor-package .price-cluster .price {
-      font-size: calc( 31px + 9 * ( ( 100vw - 400px) / 500 )); } }
+      font-size: calc( 26px + 4 * ( ( 100vw - 400px) / 500 )); } }
   @media (min-width: 900px) and (max-width: 1200px) {
     h3, .page-template-layout-sponsorship .sponsor-package .price-cluster .price {
-      font-size: calc( 40px + -5 * ( ( 100vw - 900px) / 300 )); } }
+      font-size: calc( 30px + -2 * ( ( 100vw - 900px) / 300 )); } }
   @media (min-width: 1200px) {
     h3, .page-template-layout-sponsorship .sponsor-package .price-cluster .price {
-      font-size: 35px; } }
+      font-size: 28px; } }
 
 h4 {
   font-size: 28px;
-  font-size: 26px; }
+  font-size: 22px; }
   @media (min-width: 400px) and (max-width: 900px) {
     h4 {
-      font-size: calc( 26px + 4 * ( ( 100vw - 400px) / 500 )); } }
+      font-size: calc( 22px + 1 * ( ( 100vw - 400px) / 500 )); } }
   @media (min-width: 900px) and (max-width: 1200px) {
     h4 {
-      font-size: calc( 30px + -2 * ( ( 100vw - 900px) / 300 )); } }
+      font-size: calc( 23px + 0 * ( ( 100vw - 900px) / 300 )); } }
   @media (min-width: 1200px) {
     h4 {
-      font-size: 28px; } }
+      font-size: 23px; } }
 
 h5 {
   font-size: 23px;
@@ -814,7 +815,7 @@ button.menu-toggle {
     font-weight: 700; }
     @media (min-width: 1190px) {
       .association-front-page .page-header .intro-text {
-        font-size: 44px; } }
+        font-size: 35px; } }
   @media (max-width: 799px) {
     .no-header-image .page-header {
       font-size: .95em;
@@ -1167,22 +1168,31 @@ button.menu-toggle {
     .acf-map {
       height: 420px; } }
 
-@media (min-width: 800px) {
-  #overview .sponsor-info.overview--attendees ul {
-    -webkit-columns: 2;
-       -moz-columns: 2;
-            columns: 2; } }
+#overview, .sponsor-info {
+  font-size: 14px; }
+  @media (min-width: 800px) {
+    #overview, .sponsor-info {
+      font-size: 18px; }
+      #overview .sponsor-info.overview--attendees ul, .sponsor-info .sponsor-info.overview--attendees ul {
+        -webkit-columns: 2;
+           -moz-columns: 2;
+                columns: 2; } }
+  @media (min-width: 1190px) {
+    #overview, .sponsor-info {
+      padding: 1.222em 1em 2.222em; }
+      #overview .sponsor-info, .sponsor-info .sponsor-info {
+        width: 60%;
+        margin-left: 40%; }
+        #overview .sponsor-info.overview--conference, .sponsor-info .sponsor-info.overview--conference {
+          width: 35%;
+          float: left;
+          margin-left: auto; } }
 
-@media (min-width: 1190px) {
-  #overview {
-    padding: 1.222em 1em 2.222em; }
-    #overview .sponsor-info {
-      width: 60%;
-      margin-left: 40%; }
-      #overview .sponsor-info.overview--conference {
-        width: 35%;
-        float: left;
-        margin-left: auto; } }
+.page-template-layout-sponsorship .site-main li {
+  font-size: 14px; }
+  @media (min-width: 800px) {
+    .page-template-layout-sponsorship .site-main li {
+      font-size: 18px; } }
 
 .page-template-layout-sponsorship .sponsor-group {
   overflow: hidden; }
@@ -1249,6 +1259,11 @@ button.menu-toggle {
     margin-bottom: 23px; }
   .page-template-layout-sponsorship .sponsor-package--details .benefits {
     font-size: .935em; }
+    @media (min-width: 800px) {
+      .page-template-layout-sponsorship .sponsor-package--details .benefits--other ul {
+        -webkit-columns: 2;
+           -moz-columns: 2;
+                columns: 2; } }
   .page-template-layout-sponsorship .sponsor-package--additions .teardrop {
     position: absolute;
     right: 0;
@@ -1280,17 +1295,18 @@ button.menu-toggle {
       padding: 1.833em 1rem; }
       .page-template-layout-sponsorship .sponsor-package--heading {
         margin-top: 7em;
-        -webkit-box-flex: 0;
-            -ms-flex: 0 1 15%;
-                flex: 0 1 15%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 15%;
+                flex: 1 15%;
         width: 15%;
-        padding: 1.833em 1rem; }
+        padding: 1.833em 2rem 1.833em 1.833em; }
       .page-template-layout-sponsorship .sponsor-package--details {
         padding: 1.833em 1rem;
         -webkit-box-flex: 0;
-            -ms-flex: 0 1 75%;
-                flex: 0 1 75%;
-        width: 75%; }
+            -ms-flex: 0 1 70%;
+                flex: 0 1 70%;
+        width: 70%;
+        margin-left: 5%; }
       .page-template-layout-sponsorship .sponsor-package--additions .opportunity .sponsor-package--heading {
         -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
@@ -1308,6 +1324,16 @@ button.menu-toggle {
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
                 order: 1; } }
+  @media (min-width: 800px) {
+    .page-template-layout-sponsorship .sponsor-package.opportunities {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+      .page-template-layout-sponsorship .sponsor-package.opportunities .sponsor-package--heading {
+        margin-top: 1.5rem; }
+      .page-template-layout-sponsorship .sponsor-package.opportunities .price-cluster {
+        padding-top: 23px;
+        border-top: 4px solid; } }
 
 #track-filter {
   -webkit-box-flex: 1;
@@ -1758,7 +1784,7 @@ a:visited {
   [type='color']::placeholder, [type='date']::placeholder, [type='datetime']::placeholder, [type='datetime-local']::placeholder, [type='email']::placeholder, [type='month']::placeholder, [type='number']::placeholder, [type='password']::placeholder, [type='search']::placeholder, [type='tel']::placeholder, [type='text']::placeholder, [type='time']::placeholder, [type='url']::placeholder, [type='week']::placeholder, input:not([type])::placeholder, textarea::placeholder {
     color: gray; }
 
-button, input[type='submit'], .button {
+button, input[type='submit'], .button, a.button {
   color: #fffffe;
   background-color: #2f5b88;
   border: 0;
@@ -1771,19 +1797,21 @@ button, input[type='submit'], .button {
   font-family: "myriad-pro-condensed", "Myriad Pro", "Helvetica Neue", Verdana, sans-serif;
   font-weight: 700; }
   @media (min-width: 800px) {
-    button, input[type='submit'], .button {
+    button, input[type='submit'], .button, a.button {
       display: inline-block; } }
   button:hover, button:focus, button:active, button.active,
   .open > button.dropdown-toggle, input[type='submit']:hover, input[type='submit']:focus, input[type='submit']:active, input[type='submit'].active,
   .open > input[type='submit'].dropdown-toggle, .button:hover, .button:focus, .button:active, .button.active,
-  .open > .button.dropdown-toggle {
+  .open > .button.dropdown-toggle, a.button:hover, a.button:focus, a.button:active, a.button.active,
+  .open > a.button.dropdown-toggle {
     color: #fffffe;
     background-color: #224262;
     border-color: #2f5b88; }
   button:active, button.active,
   .open > button.dropdown-toggle, input[type='submit']:active, input[type='submit'].active,
   .open > input[type='submit'].dropdown-toggle, .button:active, .button.active,
-  .open > .button.dropdown-toggle {
+  .open > .button.dropdown-toggle, a.button:active, a.button.active,
+  .open > a.button.dropdown-toggle {
     background-image: none; }
   button.disabled, button.disabled:hover, button.disabled:focus, button.disabled:active, button.disabled.active, button[disabled], button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button[disabled].active,
   fieldset[disabled] button,
@@ -1800,7 +1828,12 @@ button, input[type='submit'], .button {
   fieldset[disabled] .button:hover,
   fieldset[disabled] .button:focus,
   fieldset[disabled] .button:active,
-  fieldset[disabled] .button.active {
+  fieldset[disabled] .button.active, a.button.disabled, a.button.disabled:hover, a.button.disabled:focus, a.button.disabled:active, a.button.disabled.active, a.button[disabled], a.button[disabled]:hover, a.button[disabled]:focus, a.button[disabled]:active, a.button[disabled].active,
+  fieldset[disabled] a.button,
+  fieldset[disabled] a.button:hover,
+  fieldset[disabled] a.button:focus,
+  fieldset[disabled] a.button:active,
+  fieldset[disabled] a.button.active {
     background-color: #2f5b88;
     border-color: #2f5b88; }
 
@@ -1821,6 +1854,10 @@ hr {
 
 .page-template-layout-sponsorship .packages--intro {
   border-color: #912b2a; }
+  .page-template-layout-sponsorship .packages--intro.opportunities {
+    border-color: #c1623a; }
+    .page-template-layout-sponsorship .packages--intro.opportunities h3, .page-template-layout-sponsorship .packages--intro.opportunities .sponsor-package .price-cluster .price, .page-template-layout-sponsorship .sponsor-package .price-cluster .packages--intro.opportunities .price {
+      color: #c1623a; }
 
 .page-template-layout-sponsorship .price-cluster .price {
   color: #c1623a !important; }
@@ -1833,6 +1870,12 @@ hr {
 
 .page-template-layout-sponsorship .sponsor-package--additions .price-cluster .opportunity--subhead {
   color: #912b2a; }
+
+.page-template-layout-sponsorship .sponsor-package.opportunities .price-cluster {
+  border-color: #912b2a; }
+
+.page-template-layout-sponsorship .sponsor-info {
+  background: #fffffe; }
 
 button.menu-toggle {
   background-color: rgba(145, 43, 42, 0.65);

@@ -51,7 +51,7 @@ function association_button_shortcode_ui() {
 		'listItemImage' => 'dashicons-marker',
 		'attrs' => $fields,
 	);
-	shortcode_ui_register_for_shortcode( 'hew', $shortcode_ui_args );
+	shortcode_ui_register_for_shortcode( 'hew-button', $shortcode_ui_args );
 }
 
 /*

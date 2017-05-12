@@ -82,7 +82,7 @@
     .intro-text {
       font-weight: $weight__bold;
       @include large() {
-        font-size: ms(4);
+        font-size: ms(3);
       }
     }
   }

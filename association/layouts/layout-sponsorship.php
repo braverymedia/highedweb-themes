@@ -102,110 +102,135 @@
                    </section>
                </article>
                <article class="sponsor-package gold">
-                   <header>
+                 <span class="teardrop"></span>
+                   <header class="sponsor-package--heading">
                        <div class="price-cluster">
                            <h3><?php the_field('title_gold'); ?></h3>
                            <span class="price"><?php the_field('price_gold'); ?></span>
                            <?php
                                $availability = get_field('availability_gold');
+                               if ( $availability === "-1" ) {
+                                 $availability = "Unlimited";
+                               }
                                if ( $availability ) {?>
                                    <span class="availability"><?php echo $availability; ?> Available</span>
                            <?php } ?>
                        </div>
                    </header>
-                   <div class="description">
-                       <?php the_field('description_gold'); ?>
-                   </div>
-                   <div class="benefits">
-                       <h4>Benefits</h4>
-                       <?php the_field('benefits_list_gold'); ?>
-                   </div>
+                   <section class="sponsor-package--details">
+                     <div class="description">
+                         <?php the_field('description_gold'); ?>
+                     </div>
+                     <div class="benefits">
+                         <h4>Benefits</h4>
+                         <?php the_field('benefits_list_gold'); ?>
+                     </div>
+                   </section>
                </article>
                <article class="sponsor-package silver">
-                   <header>
+                 <span class="teardrop"></span>
+                   <header class="sponsor-package--heading">
                        <div class="price-cluster">
                            <h3><?php the_field('title_silver'); ?></h3>
                            <span class="price"><?php the_field('price_silver'); ?></span>
                        </div>
                    </header>
-                   <div class="description">
-                       <?php the_field('description_silver'); ?>
-                   </div>
-                   <div class="benefits">
-                       <h4>Benefits</h4>
-                       <?php the_field('benefits_list_silver'); ?>
-                   </div>
+                   <section class="sponsor-package--details">
+                     <div class="description">
+                         <?php the_field('description_silver'); ?>
+                     </div>
+                     <div class="benefits">
+                         <h4>Benefits</h4>
+                         <?php the_field('benefits_list_silver'); ?>
+                     </div>
+                   </section>
                </article>
                <article class="sponsor-package bronze">
-                   <header>
+                 <span class="teardrop"></span>
+                   <header class="sponsor-package--heading">
                        <div class="price-cluster">
                            <h3><?php the_field('title_bronze'); ?></h3>
                            <span class="price"><?php the_field('price_bronze'); ?></span>
                        </div>
                    </header>
-                   <div class="description">
-                       <?php the_field('description_bronze'); ?>
-                   </div>
-                   <div class="benefits">
-                       <h4>Benefits</h4>
-                       <?php the_field('benefits_list_bronze'); ?>
-                   </div>
+                   <section class="sponsor-package--details">
+                     <div class="description">
+                         <?php the_field('description_bronze'); ?>
+                     </div>
+                     <div class="benefits">
+                         <h4>Benefits</h4>
+                         <?php the_field('benefits_list_bronze'); ?>
+                     </div>
+                   </section>
                </article>
                <article class="sponsor-package academy">
-                   <header>
+                 <span class="teardrop"></span>
+                   <header class="sponsor-package--heading">
                        <div class="price-cluster">
                            <h3><?php the_field('title_academy'); ?></h3>
                            <span class="price"><?php the_field('price_academy'); ?></span>
                        </div>
                    </header>
-                   <div class="description">
-                       <?php the_field('description_academy'); ?>
-                   </div>
-                   <div class="benefits">
-                       <h4>Benefits</h4>
-                       <?php the_field('benefits_list_academy'); ?>
-                   </div>
+                   <section class="sponsor-package--details">
+                     <div class="description">
+                         <?php the_field('description_academy'); ?>
+                     </div>
+                     <div class="benefits">
+                         <h4>Benefits</h4>
+                         <?php the_field('benefits_list_academy'); ?>
+                     </div>
+                   </section>
                </article>
+             </div>
+             <header class="packages--intro opportunities">
+                 <h3>Additional Opportunities</h2>
+                 <article class="intro-copy">
+                     <?php the_field('package_introduction_copy'); ?>
+                 </article>
+             </header>
+             <div class="sponsor-packages">
+               <?php if ( have_rows('additional_opps') ) : while ( have_rows('additional_opps') ) : the_row(); ?>
                <article class="sponsor-package opportunities">
-                   <header>
-                       <div class="price-cluster">
-                           <h3>Additional Opportunities</h3>
-                       </div>
-                   </header>
-                   <div class="description">
-                       <?php the_field('description_additional_opps'); ?>
-                   </div>
-                   <?php if ( have_rows('additional_opps') ) : while ( have_rows('additional_opps') ) : the_row(); ?>
-                       <div class="opportunity">
-                           <header>
-                               <h3><?php the_sub_field('opportunity_title'); ?></h3>
-                               <p class="price"><?php the_sub_field('opportunity_price'); ?>
-                               <?php
-                               $availability = get_sub_field('opportunity_availability');
-                               if ( $availability ) {?>
-                                   <p class="subhead availability">(<?php echo $availability; ?> Available)</p>
-                           <?php } ?>
-                           </header>
-                           <p><?php the_sub_field('opportunitydescription'); ?>
+                   <header class="sponsor-package--heading">
+                      <div class="price-cluster">
+                        <h3><?php the_sub_field('opportunity_title'); ?></h3>
+                        <p class="price"><?php the_sub_field('opportunity_price'); ?>
                            <?php
-                               $text = get_sub_field('opportunity_benefits');
-                               $list = explode(PHP_EOL, $text);
-                               if ( $list ) :
-                                   echo '<ul>';
-                                   foreach ($list as $line) {
-                                       echo '<li>' . $line . '</li>';
-                                   }
-                                   echo '</ul>';
-                               endif;
-                           ?>
-                       </div>
-                   <?php endwhile; endif; ?>
+                           $availability = get_sub_field('opportunity_availability');
+                           if ( $availability === "-1" ) {
+                             $availability = "Unlimited";
+                           }
+                           if ( $availability ) {?>
+                               <p class="subhead availability"><?php echo $availability; ?> Available</p>
+                       <?php } ?>
+                     </div>
+                   </header>
+                   <section class="sponsor-package--details">
+                   <div class="benefits">
+                     <h4>Benefits</h4>
+                     <?php
+                         $text = get_sub_field('opportunity_benefits');
+                         $list = explode(PHP_EOL, $text);
+                         if ( $list ) :
+                             echo '<ul>';
+                             foreach ($list as $line) {
+                                 echo '<li>' . $line . '</li>';
+                             }
+                             echo '</ul>';
+                         endif;
+                     ?>
+                   </div>
+                   <div class="benefits--other">
+                     <?php the_sub_field('opportunity_other_content'); ?>
+                   </div>
+                 </section>
                </article>
+             <?php endwhile; endif; ?>
            </div>
          </section>
          <section id="notes" class="sponsor-info disclaimer">
            <div class="entry notes--entry">
-             <?php the_field('closing_remarks'); ?>
+             <?php the_field('closing_notes'); ?>
            </div>
          </section>
         <?php

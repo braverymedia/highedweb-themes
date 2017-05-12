@@ -1,5 +1,7 @@
-#overview {
+#overview, .sponsor-info {
+  font-size: ms(-1);
   @include medium {
+    font-size: ms(0);
     .sponsor-info {
       &.overview--attendees {
         ul {
@@ -22,6 +24,14 @@
   }
 }
 .page-template-layout-sponsorship {
+  .site-main {
+    li {
+      font-size: ms(-1);
+      @include medium {
+        font-size: ms(0)
+      }
+    }
+  }
   .sponsor-group {
     overflow: hidden; // to keep teardrops full bleed;
   }
@@ -95,6 +105,13 @@
       }
       .benefits {
         font-size: .935em;
+        @include medium {
+          &--other {
+            ul {
+              columns: 2;
+            }
+          }
+        }
       }
     }
     &--additions {
@@ -128,14 +145,15 @@
       padding: 1.833em 1rem;
       &--heading {
         margin-top: 7em;
-        flex: 0 1 15%;
+        flex: 1 15%;
         width: 15%;
-        padding: 1.833em 1rem;
+        padding: 1.833em 2rem 1.833em 1.833em;
       }
       &--details {
         padding: 1.833em 1rem;
-        flex: 0 1 75%;
-        width: 75%;
+        flex: 0 1 70%;
+        width: 70%;
+        margin-left: 5%;
       }
       &--additions {
         .opportunity {
@@ -153,5 +171,19 @@
         }
       }
     }
+    &.opportunities {
+      @include medium {
+        justify-content: flex-start;
+        .sponsor-package--heading {
+          margin-top: 1.5rem;
+        }
+        .price-cluster {
+          padding-top: ms(1);
+          border-top: 4px solid;
+        }
+      }
+    }
   }
+}
+.sponsor-info {
 }

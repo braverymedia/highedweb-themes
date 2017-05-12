@@ -218,7 +218,7 @@ a:visited {
   }
 }
 
-button, input[type='submit'], .button {
+button, input[type='submit'], .button, a.button {
   @include hew-button( $white, $endeavour, $endeavour );
   @include hew-button-size(ms(-1), ms(1), ms(1), 1.3);
   text-transform: uppercase;
@@ -246,6 +246,12 @@ hr {
   }
   .packages--intro {
     border-color: $vivid-auburn;
+    &.opportunities {
+      border-color: $ecstasy;
+      h3 {
+        color: $ecstasy;
+      }
+    }
   }
   .price-cluster {
     .price {
@@ -266,6 +272,14 @@ hr {
         }
       }
     }
+    &.opportunities {
+      .price-cluster {
+        border-color: $vivid-auburn;
+      }
+    }
+  }
+  .sponsor-info {
+    background: $white;
   }
 }
 
