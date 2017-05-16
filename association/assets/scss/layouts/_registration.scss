@@ -1,11 +1,26 @@
 .page-template-layout-registration {
+  .site-main {
+    padding-bottom: 2rem;
+  }
   .row {
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
       align-items: stretch;
+      max-width: 100%;
+      margin: 1rem 0 ms(2);
       @include medium {
+        margin: 1.8rem;
         flex-flow: row nowrap;
+      }
+      @include large {
+        margin: ms(2) 1.8rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      h3 {
+        margin: 1.8rem 0 .5rem;
       }
   }
   form {
@@ -67,10 +82,18 @@
     label {
       font-size: ms(-1);
     }
+    li {
+      padding-left: 0;
+      &:before {
+        content: '';
+      }
+    }
   }
 
   // Registration Form
   #hew-become-member-section {
+      padding: ms(2) ms(0);
+      margin: 1rem 0;
       ul {
           list-style: disc outside;
           // margin-left: 1.5em;

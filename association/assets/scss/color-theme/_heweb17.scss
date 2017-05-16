@@ -228,6 +228,15 @@ button, input[type='submit'], .button, a.button {
 hr {
   border-color: $desert;
 }
+
+// Registration
+.page-template-layout-registration {
+  .site-main {
+    background: $white;
+  }
+}
+
+
 // sponsorship
 .sponsor-group {
   background-color: $white;

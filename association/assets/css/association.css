@@ -1849,6 +1849,9 @@ button, input[type='submit'], .button, a.button {
 hr {
   border-color: #a0653c; }
 
+.page-template-layout-registration .site-main {
+  background: #fffffe; }
+
 .sponsor-group {
   background-color: #fffffe; }
 
@@ -1983,6 +1986,9 @@ li.track-code {
 #track-filter h4 {
   color: #912b2a; }
 
+.page-template-layout-registration .site-main {
+  padding-bottom: 2rem; }
+
 .page-template-layout-registration .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1996,13 +2002,23 @@ li.track-code {
           justify-content: flex-start;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
-          align-items: stretch; }
+          align-items: stretch;
+  max-width: 100%;
+  margin: 1rem 0 28px; }
   @media (min-width: 800px) {
     .page-template-layout-registration .row {
+      margin: 1.8rem;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row nowrap;
               flex-flow: row nowrap; } }
+  @media (min-width: 1190px) {
+    .page-template-layout-registration .row {
+      margin: 28px 1.8rem; } }
+  .page-template-layout-registration .row p {
+    margin-bottom: 1rem; }
+  .page-template-layout-registration .row h3, .page-template-layout-registration .row .page-template-layout-sponsorship .sponsor-package .price-cluster .price, .page-template-layout-sponsorship .sponsor-package .price-cluster .page-template-layout-registration .row .price {
+    margin: 1.8rem 0 .5rem; }
 
 .page-template-layout-registration form {
   max-width: 720px; }
@@ -2046,10 +2062,17 @@ li.track-code {
   margin-bottom: 28px; }
   .page-template-layout-registration .setlist label {
     font-size: 14px; }
+  .page-template-layout-registration .setlist li {
+    padding-left: 0; }
+    .page-template-layout-registration .setlist li:before {
+      content: ''; }
 
-.page-template-layout-registration #hew-become-member-section ul {
-  list-style: disc outside;
-  margin-bottom: 35px; }
+.page-template-layout-registration #hew-become-member-section {
+  padding: 28px 18px;
+  margin: 1rem 0; }
+  .page-template-layout-registration #hew-become-member-section ul {
+    list-style: disc outside;
+    margin-bottom: 35px; }
 
 .page-template-layout-registration .label-note {
   font-weight: 400;
