@@ -1,0 +1,44 @@
+body {
+  background: transparent;
+  #masthead, .jump-menu {
+    display: none;
+  }
+  #primary-content {
+    margin: 0;
+    width: 100%;
+  }
+}
+.has-header-image {
+  .custom-header-image {
+    min-height: 0;
+    height: auto;
+    img {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+}
+.page-header {
+  .intro-text {
+    color: #000;
+    margin-top: 0;
+  }
+}
+.screen-reader-text {
+  position: static !important;
+  display: inline;
+  height: auto;
+  font-size: 1em;
+  width: auto;
+  &.skip-link {
+    display: none;
+  }
+}
+.site-menu-group {
+  display: none;
+}
+.page-template-layout-schedule {
+
+}

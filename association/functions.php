@@ -179,6 +179,9 @@ function association_scripts() {
     // Theme stylesheet.
     wp_enqueue_style( 'association-style', get_stylesheet_directory_uri() . '/assets/css/association.css', false, $theme_version, 'all' );
 
+    // Separate print styles.
+    wp_enqueue_style( 'association-print-style', get_stylesheet_directory_uri() . '/assets/css/print.css', false, $theme_version, 'print' );
+
     $association_l10n = array(
         'quote'          => association_get_svg( array( 'icon' => 'quote-right' ) ),
     );

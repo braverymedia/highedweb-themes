@@ -1,0 +1,33 @@
+body {
+  background: transparent; }
+  body #masthead, body .jump-menu {
+    display: none; }
+  body #primary-content {
+    margin: 0;
+    width: 100%; }
+
+.has-header-image .custom-header-image {
+  min-height: 0;
+  height: auto; }
+  .has-header-image .custom-header-image img {
+    display: none; }
+  .has-header-image .custom-header-image:after {
+    display: none; }
+
+.page-header .intro-text {
+  color: #000;
+  margin-top: 0; }
+
+.screen-reader-text {
+  position: static !important;
+  display: inline;
+  height: auto;
+  font-size: 1em;
+  width: auto; }
+  .screen-reader-text.skip-link {
+    display: none; }
+
+.site-menu-group {
+  display: none; }
+
+/*# sourceMappingURL=print.css.map */
