@@ -127,6 +127,7 @@
       }
       .opportunity {
         margin-bottom: 3em;
+        width: 100%;
         &--subhead {
           font-weight: $weight__bold;
           text-transform: uppercase;
@@ -156,6 +157,8 @@
         margin-left: 5%;
       }
       &--additions {
+        width: 100%;
+        display: block;
         .opportunity {
           .sponsor-package--heading {
             order: 2;
@@ -185,5 +188,6 @@
     }
   }
 }
-.sponsor-info {
+.opportunity {
+  width: 100%;
 }

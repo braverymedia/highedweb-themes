@@ -50,7 +50,7 @@ SVGInjector(svgInjection);
     var len;
 
     if (!Modernizr.objectfit) {
-    	imgContainers = document.querySelectorAll('.post__image-container');
+    	imgContainers = document.querySelectorAll('.image--fit-container');
     	len = imgContainers.length;
 
     	for (var i=0; i<len; i++) {

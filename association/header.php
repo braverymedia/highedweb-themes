@@ -27,7 +27,7 @@
 	<section id="masthead">
 		<header class="site-branding">
 			<div class="site-logo">
-				<span class="site-title"><span class="screen-reader-text"><?php the_title(); ?></span>
+				<span class="site-title screen-reader-text"><?php the_title(); ?></span>
 				<?php the_custom_logo(); ?>
 			</div>
 		</header>

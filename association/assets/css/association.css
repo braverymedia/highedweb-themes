@@ -409,6 +409,8 @@ hr {
        object-fit: cover;
     -o-object-position: center top;
        object-position: center top; }
+  .image--fit-container.compat-object-fit img {
+    display: none; }
 
 .alignleft {
   float: left;
@@ -1276,7 +1278,8 @@ button.menu-toggle {
       .page-template-layout-sponsorship .sponsor-package--additions .teardrop {
         display: none; } }
   .page-template-layout-sponsorship .sponsor-package--additions .opportunity {
-    margin-bottom: 3em; }
+    margin-bottom: 3em;
+    width: 100%; }
     .page-template-layout-sponsorship .sponsor-package--additions .opportunity--subhead {
       font-weight: 700;
       text-transform: uppercase;
@@ -1307,23 +1310,26 @@ button.menu-toggle {
                 flex: 0 1 70%;
         width: 70%;
         margin-left: 5%; }
-      .page-template-layout-sponsorship .sponsor-package--additions .opportunity .sponsor-package--heading {
-        -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-                order: 2;
-        margin-top: auto;
-        -ms-flex-item-align: middle;
-            -ms-grid-row-align: middle;
-            align-self: middle; }
-      .page-template-layout-sponsorship .sponsor-package--additions .opportunity .benefits {
-        padding: 1.833em 1rem;
-        -webkit-box-flex: 0;
-            -ms-flex: 0 1 75%;
-                flex: 0 1 75%;
-        width: 75%;
-        -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
-                order: 1; } }
+      .page-template-layout-sponsorship .sponsor-package--additions {
+        width: 100%;
+        display: block; }
+        .page-template-layout-sponsorship .sponsor-package--additions .opportunity .sponsor-package--heading {
+          -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2;
+          margin-top: auto;
+          -ms-flex-item-align: middle;
+              -ms-grid-row-align: middle;
+              align-self: middle; }
+        .page-template-layout-sponsorship .sponsor-package--additions .opportunity .benefits {
+          padding: 1.833em 1rem;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 1 75%;
+                  flex: 0 1 75%;
+          width: 75%;
+          -webkit-box-ordinal-group: 2;
+              -ms-flex-order: 1;
+                  order: 1; } }
   @media (min-width: 800px) {
     .page-template-layout-sponsorship .sponsor-package.opportunities {
       -webkit-box-pack: start;
@@ -1334,6 +1340,9 @@ button.menu-toggle {
       .page-template-layout-sponsorship .sponsor-package.opportunities .price-cluster {
         padding-top: 23px;
         border-top: 4px solid; } }
+
+.opportunity {
+  width: 100%; }
 
 #track-filter {
   -webkit-box-flex: 1;
