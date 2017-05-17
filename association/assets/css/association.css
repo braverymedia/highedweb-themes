@@ -646,7 +646,7 @@ button.menu-toggle {
     visibility: visible; }
   @media (max-width: 799px) {
     .jump-menu {
-      margin-top: -52px; }
+      margin-top: -44px; }
       .jump-menu h5 {
         -webkit-box-flex: 1;
             -ms-flex: 1 0 80%;
@@ -655,7 +655,8 @@ button.menu-toggle {
         padding: .5rem;
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
-                order: 1; }
+                order: 1;
+        cursor: pointer; }
       .jump-menu menu {
         -webkit-box-flex: 1;
             -ms-flex: 1 100%;

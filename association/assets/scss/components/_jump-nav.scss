@@ -25,12 +25,13 @@
     }
   }
   @include medium-down {
-    margin-top: -52px;
+    margin-top: -44px;
     h5 {
       flex: 1 0 80%;
       text-align: center;
       padding: .5rem;
       order: 1;
+      cursor: pointer;
     }
     menu {
       flex: 1 100%;
