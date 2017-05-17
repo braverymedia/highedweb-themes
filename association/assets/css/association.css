@@ -1553,6 +1553,8 @@ button.menu-toggle {
   .page-template-layout-schedule .schedule .event-type--session .session--location {
     font-weight: 700;
     font-size: 14px; }
+  .page-template-layout-schedule .schedule .event-type--session .session .session--object p {
+    margin-bottom: 18px; }
   @media (min-width: 800px) {
     .page-template-layout-schedule .schedule .event-type--session .session {
       padding: .5rem 0 1.8rem;
@@ -1572,7 +1574,9 @@ button.menu-toggle {
         -webkit-box-flex: 1;
             -ms-flex: 1;
                 flex: 1;
-        margin-left: 14px; } }
+        margin-left: 14px; }
+        .page-template-layout-schedule .schedule .event-type--session .session .session--object p {
+          font-size: 14px; } }
   @media (min-width: 1190px) {
     .page-template-layout-schedule .schedule .event-type--session .session--object > header {
       display: -webkit-box;
