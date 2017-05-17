@@ -39,8 +39,12 @@
             if (a.track == b.track) return a.sequenceNumber - b.sequenceNumber;
             return track_order[a.track] - track_order[b.track];
         };
+
+        var tz = function(t) {
+            return t.replace('.0000000','-04:00');
+        };
+        
         $.getJSON('https://2017reg.highedweb.org/schedule.json', function(data) {
-            console.log(data);
             var pre_workshops = $.map(data['PreWorkshops'], function(s, idx) {
                 return {
                     code: s['Code'],
@@ -77,8 +81,8 @@
             });
             var sorted_slots = $.map(data['ScheduleSlots'], function(slot, idx) {
                 return {
-                    startTime: (slot['StartTime'] || ""),
-                    endTime: (slot['EndTime'] || ""),
+                    startTime: (tz(slot['StartTime']) || ""),
+                    endTime: (tz(slot['EndTime']) || ""),
                     kind: (slot['Type'] || "General"),
                     title: (slot['GeneralSessionTitle'] || ""),
                     location: (slot['RoomTitle'] || ""),
