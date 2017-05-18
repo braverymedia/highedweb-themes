@@ -1399,7 +1399,9 @@ button.menu-toggle {
         width: 38px;
         font-size: 14px;
         -webkit-transform: translateY(2px);
-                transform: translateY(2px); } }
+                transform: translateY(2px); }
+      #track-filter .track-list li.track-code:hover {
+        text-decoration: none; } }
 
 @media (min-width: 800px) {
   .page-template-layout-schedule .schedule--day {
