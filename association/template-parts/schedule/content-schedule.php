@@ -54,6 +54,7 @@
                     title: s['Title'],
                     location: s['RoomTitle'],
                     description: s['Description'],
+                    tags: [],
                 };
             });
             var post_workshops = $.map(data['PostWorkshops'], function(s, idx) {
@@ -65,6 +66,7 @@
                     title: s['Title'],
                     location: s['RoomTitle'],
                     description: s['Description'],
+                    tags: [],
                 };
             });
 
@@ -77,6 +79,7 @@
                     title: s['Title'],
                     location: s['RoomTitle'],
                     description: s['Abstract'],
+                    tags: s['Tags'],
                 };
             });
             var sorted_slots = $.map(data['ScheduleSlots'], function(slot, idx) {
