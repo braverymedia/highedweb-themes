@@ -302,6 +302,14 @@ button.menu-toggle {
   color: $white;
   a {
     color: $white;
+    &:hover {
+      background-color: $mojo;
+    }
+  }
+  li.active {
+    a {
+      background-color: $vivid-auburn;
+    }
   }
   @include medium-down {
     &.open {
@@ -350,7 +358,12 @@ button.menu-toggle {
           color: $jelly-bean;
         }
         &--location {
-          color: $milano-red;
+          color: $mojo;
+        }
+        &--tags {
+          span {
+            background-color: lighten($ronchi, 30%);
+          }
         }
       }
     }
@@ -388,29 +401,61 @@ button.menu-toggle {
 }
 li.track-code {
   color: $endeavour;
-  &--wrk:before {
-    background-color: $big-stone;
+  &--wrk {
+    &:before, &.active {
+      background-color: $big-stone;
+      color: $white;
+      text-decoration: none;
+    }
   }
-  &--aim:before {
-    background-color: $endeavour;
+  &--aim{
+    &:before, &.active {
+      background-color: $endeavour;
+      color: $white;
+      text-decoration: none;
+    }
   }
-  &--dpa:before {
-    background-color: $dpa;
+  &--dpa{
+    &:before, &.active {
+      background-color: $dpa;
+      color: $white;
+      text-decoration: none;
+    }
   }
-  &--mcs:before {
-    background-color: $mcs;
+  &--mcs {
+    &:before, &.active {
+      background-color: $mcs;
+      color: $white;
+      text-decoration: none;
+    }
   }
-  &--mpd:before {
-    background-color: $mpd;
+  &--mpd {
+    &:before, &.active {
+      background-color: $mpd;
+      color: $white;
+      text-decoration: none;
+    }
   }
-  &--tie:before {
-    background-color: $tie;
+  &--tie {
+    &:before, &.active {
+      background-color: $tie;
+      color: $white;
+      text-decoration: none;
+    }
   }
-  &--uad:before {
-    background-color: $uad;
+  &--uad {
+    &:before, &.active {
+      background-color: $uad;
+      color: $white;
+      text-decoration: none;
+    }
   }
-  &--cor:before {
-    background-color: $cor;
+  &--cor {
+    &:before, &.active {
+      background-color: $cor;
+      color: $white;
+      text-decoration: none;
+    }
   }
 }
 #track-filter {

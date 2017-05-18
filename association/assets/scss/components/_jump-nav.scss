@@ -15,7 +15,7 @@
     visibility: hidden;
     @include medium {
       visibility: visible;
-      height: auto;
+      height: 100%;
     }
   }
   &.open {
@@ -57,6 +57,7 @@
     }
   }
   @include medium {
+    height: 50px;
     align-items: center;
     justify-content:flex-start;
     flex-wrap: nowrap;
@@ -64,16 +65,37 @@
     li {
       display: inline;
       font-size: ms(-1);
-      margin-right: 1rem;
+      a {
+        padding: 0 1rem;
+        transition: background-color .2s ease-in-out;
+      }
     }
     h5 {
       flex: 0 1 auto;
       padding: 0 1.8rem;
       font-size: ms(-1);
-      margin-top: 2px;
+      margin-top: -1px;
     }
     menu {
       flex: 1 auto;
+      align-self: stretch;
+      height: 100%;
+      display: flex;
+      li {
+        display: flex;
+        flex: 0;
+        align-self: stretch;
+        justify-content: flex-start;
+        cursor: pointer;
+        a {
+          flex: 1;
+          align-self: stretch;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          vertical-align: middle;
+        }
+      }
     }
     button {
       align-self: flex-end;
@@ -83,6 +105,9 @@
       }
       .icon {
         margin-left: .8rem;
+      }
+      &#custom-schedule {
+        opacity: .5; // remove when it's live
       }
     }
   }

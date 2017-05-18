@@ -118,6 +118,7 @@
         h4 {
           line-height: 1.2;
           font-size: ms(0);
+          margin-bottom: ms(-2);
         }
         header {
           line-height: 1;
@@ -127,6 +128,20 @@
           font-family: $font__default-heading-stack;
           font-weight: $weight__bold;
           font-size: ms(-1);
+        }
+        &--tags {
+          margin: ms(-2) 0;
+          span {
+            display: inline-block;
+            font-size: ms(-2);
+            border-radius: 2px;
+            padding: .25em .5em;
+            margin-right: .5em;
+            font-weight: $weight__bold;
+          }
+        }
+        &--title {
+          cursor: pointer;
         }
         &--location {
           font-weight: $weight__bold;
@@ -142,7 +157,13 @@
           margin: ms(-1) 0 0 1rem;
           display: flex;
           flex-flow: row wrap;
-          .schedule-tools {
+          span[class*="track-code--"] {
+            width: 46px;
+            display: inline-block;
+            text-align: center;
+            padding: 0 5px;
+          }
+          .session-tools {
             flex: 0;
           }
           .session--object {
