@@ -51,6 +51,13 @@
         };
         
         $.getJSON('https://2017reg.highedweb.org/schedule.json', function(data) {
+            var academies = $.map(data['Academies'], function(s, idx) {
+                return {
+                    title: s['Title'] + ' Academy',
+                    location: s['RoomTitle'],
+                    url: s['Url'],
+                };
+            });
             var pre_workshops = $.map(data['PreWorkshops'], function(s, idx) {
                 return {
                     code: s['Code'],
@@ -105,6 +112,7 @@
                 unsortedSessions: unsorted_sessions.sort(compare_sessions_for_order), // they still need to get sorted by the CODE
                 preWorkshops: pre_workshops,
                 postWorkshops: post_workshops,
+                academies: academies,
             });
         });
     })(jQuery);
