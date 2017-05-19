@@ -41,7 +41,12 @@
         };
 
         var tz = function(t) {
-            return t.replace('.0000000','-04:00');
+            // affix browser's current timezone to the timezoneless iso 8601 string we get from the API.  This makes the times on the person's computer always reflect the time it'll be at the conference without having to do timezone math
+            function getTimeZone() {
+                var offset = new Date().getTimezoneOffset(), o = Math.abs(offset);
+                return (offset < 0 ? "+" : "-") + ("00" + Math.floor(o / 60)).slice(-2) + ":" + ("00" + (o % 60)).slice(-2);
+            }
+            return t.replace('.0000000',getTimeZone());
         };
         
         $.getJSON('https://2017reg.highedweb.org/schedule.json', function(data) {
