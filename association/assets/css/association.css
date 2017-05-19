@@ -1657,8 +1657,8 @@ button.menu-toggle {
               justify-content: flex-end; }
     .page-template-layout-schedule .schedule .event-type--session .session--title {
       -webkit-box-flex: 2;
-          -ms-flex: 2;
-              flex: 2; }
+          -ms-flex: 2 60%;
+              flex: 2 60%; }
     .page-template-layout-schedule .schedule .event-type--session .session--location {
       -webkit-box-flex: 1;
           -ms-flex: 1;
