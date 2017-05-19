@@ -12,7 +12,8 @@
 ?>
 
     <div id="schedule-root"></div>
-    <script src="/wp-content/themes/association/template-parts/schedule/schedule.min.js" type="text/javascript"></script>
+    <?php $md5 = md5_file( get_stylesheet_directory() . '/template-parts/schedule/schedule.min.js' ); ?>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/template-parts/schedule/schedule.min.js?bust=<?php echo $md5 ?>" type="text/javascript"></script>
     <script type="text/javascript">
     (function($) {
         var track_order = {
