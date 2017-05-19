@@ -26,6 +26,7 @@
             'UAD': 6,
             'COR': 7,
             'LIT': 8,
+            'PST': 9,
         };
         var map_presenter = function(p, idx) {
             return {
@@ -95,6 +96,18 @@
                     tags: s['Tags'],
                 };
             });
+            unsorted_sessions = unsorted_sessions.concat( $.map(data['Posters'], function(s, idx) {
+                return {
+                    code: s['Code'],
+                    track: 'PST',
+                    sequenceNumber: 0,
+                    presenters: $.map(s['Presenters'], map_presenter),
+                    title: s['Title'],
+                    location: '',
+                    description: s['Abstract'],
+                    tags: s['Tags'],
+                };
+            }) );
             var sorted_slots = $.map(data['ScheduleSlots'], function(slot, idx) {
                 return {
                     startTime: (tz(slot['StartTime']) || ""),
