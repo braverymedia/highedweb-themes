@@ -40,7 +40,17 @@
         align-items: flex-start;
         justify-content: flex-end;
       }
+      &.event-type--poster {
+        li {
+          padding-left: 0;
+          &:before {
+            content: "";
+          }
+
+        }
+      }
     }
+
     .time-block {
       font-family: $font__default-heading-stack;
       font-weight: $weight__bold;

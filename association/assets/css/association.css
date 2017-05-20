@@ -1504,6 +1504,10 @@ button.menu-toggle {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end; } }
+  .page-template-layout-schedule .schedule--event.event-type--poster li {
+    padding-left: 0; }
+    .page-template-layout-schedule .schedule--event.event-type--poster li:before {
+      content: ""; }
 
 .page-template-layout-schedule .schedule .time-block {
   font-family: "myriad-pro-condensed", "Myriad Pro", "Helvetica Neue", Verdana, sans-serif;
@@ -2039,6 +2043,9 @@ button.menu-toggle {
 
 .page-template-layout-schedule span.track-code--cor {
   background-color: #000; }
+
+.page-template-layout-schedule span.track-code--pst {
+  background-color: #555; }
 
 li.track-code {
   color: #2f5b88; }
